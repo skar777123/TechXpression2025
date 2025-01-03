@@ -166,7 +166,7 @@ const Forms = () => {
   const [submit, setSubmit] = useState(false);
   return (
     <section id="register">
-      {submit ? (
+      {!submit ? (
         <div className="flex flex-col items-center justify-center pb-40">
           <p className="font-bold text-yellow-500 text-3xl text-center">
             {/* Thank You For Registering */}
@@ -179,7 +179,7 @@ const Forms = () => {
             6th January, 2025 on 11:59 AM
           </p>
           <CycleText />
-        </div>  
+        </div>
       ) : (
         <form
           className="ml-10 md:ml-40 mt-10"

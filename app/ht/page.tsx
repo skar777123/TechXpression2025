@@ -10,6 +10,7 @@ import { HiTrophy } from "react-icons/hi2";
 import { toast, ToastContainer } from "react-toastify";
 import { HackathonAction } from "../action/action";
 import Image from "next/image";
+import Link from "next/link";
 // import { Nav } from "../LS/page";
 
 export default function Hackthon() {
@@ -42,36 +43,38 @@ export const Nav = () => {
         <Image
           src="/TX.png"
           alt="TechXpression "
+          width={20}
+          height={20}
           className=" mix-blend-difference md:w-20 w-10 mx-6 my-2"
         />
       </div>
       <div className=" md:ml-80 ">
         <nav className=" left-0 right-0 top-0 z-50 flex jus justify-center  px-6 py-8 text-white">
           <div className="flex flex-row  space-x-10 opacity-40">
-            <a
+            <Link
               href="/"
               className="flex items-center gap-1  text-zinc-400 md:text-lg text-xs"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="LS"
               className="flex items-center gap-1  text-zinc-400 md:text-lg text-xs"
             >
               Live Stream
-            </a>
-            <a
+            </Link>
+            <Link
               href="Map"
               className="flex items-center gap-1  text-zinc-400 md:text-lg text-xs"
             >
               Map
-            </a>
-            <a
+            </Link>
+            <Link
               href="CC"
               className="flex items-center gap-1  text-zinc-400 md:text-lg text-xs"
             >
               Coded Connection
-            </a>
+            </Link>
           </div>
           {/* <button
             onClick={() => {
@@ -141,7 +144,7 @@ export function CycleText() {
             transition={{ duration: 1.5 }}
             className="inline-block font-mono text-xl text-yellow-500 "
           >
-            <a href={words[index]?.link}>{words[index].name}</a>
+            <Link href={words[index]?.link}>{words[index].name}</Link>
           </motion.h1>
         </AnimatePresence>
       </span>
@@ -152,7 +155,7 @@ export function CycleText() {
 function RegButton({ text, className, href }: IGetStartedButtonProps) {
   return (
     <div className="min-h-12 mr-10 flex ">
-      <a
+      <Link
         href={href}
         className={cn(
           "group flex  w-26 items-center justify-center gap-3 rounded-lg bg-yellow-500 p-2 font-bold transition-colors duration-100 ease-in-out hover:bg-green-500",
@@ -187,7 +190,7 @@ function RegButton({ text, className, href }: IGetStartedButtonProps) {
             />
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 }
@@ -366,11 +369,13 @@ const Forms = () => {
   const [submit, setSubmit] = useState(false);
   return (
     <section id="register">
-      {submit ? (
+      {!submit ? (
         <div className="flex flex-col items-center justify-center pb-40">
           <p className="font-bold text-yellow-500 text-3xl text-center">
             {/* Thank You For Registering */}
-            <span className="text-yellow-500">Registration will be starting on</span>
+            <span className="text-yellow-500">
+              Registration will be starting on
+            </span>
           </p>
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
             {/* More Opportunities for you...Click below */}
@@ -524,21 +529,22 @@ const tourney = Tourney({
 });
 
 export const Input = React.forwardRef<
-  HTMLInputElement,
-  React.ComponentProps<"input">
+HTMLInputElement,
+React.ComponentProps<"input">
 >(({ className, type, ...props }, ref) => {
-  return (
-    <input
-      type={type}
-      className={cn(
-        "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-        className
-      )}
-      ref={ref}
-      {...props}
-    />
-  );
+return (
+  <input
+    type={type}
+    className={cn(
+      "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+      className
+    )}
+    ref={ref}
+    {...props}
+  />
+);
 });
+
 Input.displayName = "Input";
 
 interface TypingTextProps {
