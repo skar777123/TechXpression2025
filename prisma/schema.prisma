@@ -1,0 +1,97 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Hackathon {
+  id                    String   @id @default(cuid())
+  TeamName              String
+  Leader                String
+  Number                String
+  Participant2          String
+  Participant3          String
+  Participant4          String
+  College               String
+  TransactionId         String
+  TransactionScreenShot String   @default("-")
+  Created               DateTime @default(now())
+  Updated               DateTime @updatedAt
+}
+
+model GvG {
+  id                    String   @id @default(cuid())
+  TeamName              String
+  Leader                String
+  Number                String
+  Participant2          String
+  Participant3          String
+  College               String
+  TransactionId         String
+  TransactionScreenShot String   @default("-")
+  Created               DateTime @default(now())
+  Updated               DateTime @updatedAt
+}
+
+model TechTH {
+  id           String   @id @default(cuid())
+  TeamName     String
+  Leader       String
+  Number       String
+  Participant2 String
+  Participant3 String
+  Participant4 String
+  College      String
+  Created      DateTime @default(now())
+  Updated      DateTime @updatedAt
+}
+
+model TechStar_Unplugged {
+  id           String   @id @default(cuid())
+  Type         String
+  Leader       String
+  Number       String
+  Participant2 String   @default("-")
+  Participant3 String   @default("-")
+  Participant4 String   @default("-")
+  College      String
+  Created      DateTime @default(now())
+  Updated      DateTime @updatedAt
+}
+
+model Aicons {
+  id           String   @id @default(cuid())
+  Type         String
+  Number       String
+  Participant1 String
+  Participant2 String   @default("-")
+  College      String
+  Created      DateTime @default(now())
+  Updated      DateTime @updatedAt
+}
+
+model AiCF {
+  id           String   @id @default(cuid())
+  Type         String
+  Number       String
+  Participant1 String
+  Participant2 String   @default("-")
+  College      String
+  Created      DateTime @default(now())
+  Updated      DateTime @updatedAt
+}
+
+model Contact {
+  id          Int    @id @default(autoincrement())
+  name        String
+  email       String
+  phone       String
+  collegeName String
+  message     String
+}
