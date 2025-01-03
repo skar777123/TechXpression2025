@@ -7,7 +7,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { FiArrowRight, FiMapPin } from "react-icons/fi";
+import { FiMapPin } from "react-icons/fi";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { useRef, useState } from "react";
 import styles from "./ui/CornerNav.module.css";
@@ -93,7 +93,11 @@ const Nav = () => {
   return (
     <div className="flex justify-between">
       <div>
-        <img src="/TX.png" alt="TechXpression" className="fixed w-16 ml-4 mt-2" />
+        <img
+          src="/TX.png"
+          alt="TechXpression"
+          className="fixed w-16 ml-4 mt-2"
+        />
       </div>
       <div
         className={`flex flex-row ${styles.navContainer} ${
@@ -117,7 +121,11 @@ const Nav = () => {
           <button className={styles.navToggle} onClick={toggleNav}>
             ☰
           </button>
-          <nav className={`bg-yellow-400 font-bold bg-opacity-80 ${styles.nav} ${isOpen ? styles.show : ""}`}>
+          <nav
+            className={`bg-yellow-400 font-bold bg-opacity-80 ${styles.nav} ${
+              isOpen ? styles.show : ""
+            }`}
+          >
             <ul className="ul">
               <li className="li pl-2">
                 <Link href="LS">Live Stream</Link>

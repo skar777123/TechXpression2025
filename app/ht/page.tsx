@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { HiTrophy } from "react-icons/hi2";
 import { toast, ToastContainer } from "react-toastify";
 import { HackathonAction } from "../action/action";
+import Image from "next/image";
 // import { Nav } from "../LS/page";
 
 export default function Hackthon() {
@@ -38,7 +39,7 @@ export const Nav = () => {
   return (
     <div className="flex flex-row ">
       <div>
-        <img
+        <Image
           src="/TX.png"
           alt="TechXpression "
           className=" mix-blend-difference md:w-20 w-10 mx-6 my-2"

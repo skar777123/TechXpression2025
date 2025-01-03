@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { cn } from "@/lib/utils";
 import { Tourney } from "next/font/google";
-import Link from "next/link";
 import { Nav } from "../ht/page";
 
 export default function LiveStream() {
