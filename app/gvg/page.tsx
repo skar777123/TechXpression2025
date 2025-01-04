@@ -180,7 +180,7 @@ const Forms = () => {
             {/* More Opportunities for you...Click below */}
             6th January, 2025 on 11:59 AM
           </p>
-          {/* {/* <CycleText /> */} */}
+          {/* {/* <CycleText /> */} 
         </div>
       ) : (
         <form

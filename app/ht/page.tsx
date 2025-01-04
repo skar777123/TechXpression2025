@@ -5,7 +5,7 @@ import { Tourney } from "next/font/google";
 import { ArrowRight } from "lucide-react";
 import { ReactNode, useEffect, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+// import { AnimatePresence, motion } from "framer-motion";
 import { HiTrophy } from "react-icons/hi2";
 import { toast, ToastContainer } from "react-toastify";
 import { HackathonAction } from "../action/action";
