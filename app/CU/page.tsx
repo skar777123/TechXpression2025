@@ -56,7 +56,7 @@ export default function ContactPage() {
                 <input
                   placeholder="Name"
                   type="text"
-                  className="w-56 md:w-96"
+                  className="w-56 md:w-96 rounded-lg text-black"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <input
                   placeholder="Email"
                   type="email"
-                  className="w-56 md:w-96"
+                  className="w-56 md:w-96 rounded-lg text-black"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 <input
                   placeholder="Number"
                   type="text"
-                  className="w-56 md:w-96"
+                  className="w-56 md:w-96 rounded-lg text-black"
                   required
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
@@ -86,7 +86,7 @@ export default function ContactPage() {
                 <input
                   placeholder="College Name"
                   type="text"
-                  className="w-56 md:w-96"
+                  className="w-56 md:w-96 rounded-lg text-black"
                   required
                   value={college}
                   onChange={(e) => setCollege(e.target.value)}
@@ -96,7 +96,7 @@ export default function ContactPage() {
                 <input
                   placeholder="Message"
                   type="text"
-                  className="w-56 md:w-96"
+                  className="w-56 md:w-96 rounded-lg text-black"
                   required
                   value={msg}
                   onChange={(e) => setMsg(e.target.value)}
