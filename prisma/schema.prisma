@@ -40,51 +40,55 @@ model GvG {
 }
 
 model TechTH {
-  id           String   @id @default(cuid())
-  TeamName     String
-  Leader       String
-  Number       String
-  Participant2 String
-  Participant3 String
-  Participant4 String
-  College      String
-  Created      DateTime @default(now())
-  Updated      DateTime @updatedAt
+  id            String   @id @default(cuid())
+  TeamName      String
+  Leader        String
+  Number        String
+  Participant2  String
+  Participant3  String
+  Participant4  String
+  College       String
+  TransactionId String
+  Created       DateTime @default(now())
+  Updated       DateTime @updatedAt
 }
 
 model TechStar_Unplugged {
-  id           String   @id @default(cuid())
-  Type         String
-  Leader       String
-  Number       String
-  Participant2 String   @default("-")
-  Participant3 String   @default("-")
-  Participant4 String   @default("-")
-  College      String
-  Created      DateTime @default(now())
-  Updated      DateTime @updatedAt
+  id            String   @id @default(cuid())
+  Type          String
+  Leader        String
+  Number        String
+  Participant2  String   @default("-")
+  Participant3  String   @default("-")
+  Participant4  String   @default("-")
+  College       String
+  TransactionId String
+  Created       DateTime @default(now())
+  Updated       DateTime @updatedAt
 }
 
 model Aicons {
-  id           String   @id @default(cuid())
-  Type         String
-  Number       String
-  Participant1 String
-  Participant2 String   @default("-")
-  College      String
-  Created      DateTime @default(now())
-  Updated      DateTime @updatedAt
+  id            String   @id @default(cuid())
+  Type          String
+  Number        String
+  Participant1  String
+  Participant2  String   @default("-")
+  College       String
+  TransactionId String
+  Created       DateTime @default(now())
+  Updated       DateTime @updatedAt
 }
 
 model AiCF {
-  id           String   @id @default(cuid())
-  Type         String
-  Number       String
-  Participant1 String
-  Participant2 String   @default("-")
-  College      String
-  Created      DateTime @default(now())
-  Updated      DateTime @updatedAt
+  id            String   @id @default(cuid())
+  Type          String
+  Number        String
+  Participant1  String
+  Participant2  String   @default("-")
+  College       String
+  TransactionId String
+  Created       DateTime @default(now())
+  Updated       DateTime @updatedAt
 }
 
 model Contact {

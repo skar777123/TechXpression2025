@@ -7,6 +7,7 @@ import { BoldCopy, TypingText } from "../ht/page";
 import { tthAction } from "../action/action";
 import { toast, ToastContainer } from "react-toastify";
 import { cn } from "@/lib/utils";
+import Scanner from "../ht/ui/scanner";
 
 export default function page() {
   return (
@@ -51,17 +52,21 @@ const GeneralRules = () => {
             team must appoint a leader who will be the main point of contact.
           </p>
           <p className="mb-1">
-            <b>2. </b>All teams must register by 20th Jan 2025. Late
+            <b>2. </b> Entry fee of Rs.
+            <span className="text-yellow-500">49</span> /- per Team.
+          </p>
+          <p className="mb-1">
+            <b>3. </b>All teams must register by 20th Jan 2025. Late
             registrations will not be accepted.
           </p>
           <p className="mb-1">
-            <b>3. </b>All participants must adhere to ensure{" "}
+            <b>4. </b>All participants must adhere to ensure{" "}
             <span className="text-yellow-500">
               respectful and fair behaviour.
             </span>
           </p>
           <p className="mb-1">
-            <b>4. </b> Only First{" "}
+            <b>5. </b> Only First{" "}
             <span className="text-yellow-500">15 Teams </span> only will get
             Opportuinity in the Hackathon.
           </p>
@@ -148,11 +153,12 @@ const Forms = () => {
   const [thirdMember, setThirdMember] = useState("");
   const [fourthMember, setFourthMember] = useState("");
   const [collegeName, setCollegeName] = useState("");
+  const [transactionId, setTransactionId] = useState("");
   const [submit, setSubmit] = useState(false);
   return (
     <section id="register">
       {submit ? (
-        <div className="flex flex-col items-center mt-32 ml-20">
+        <div className="flex flex-col  items-center mt-32 ml-20">
           <p className="font-bold text-yellow-500 text-3xl">
             Thank You For Registering
           </p>
@@ -163,7 +169,7 @@ const Forms = () => {
         </div>
       ) : (
         <form
-          className="md:ml-40 mt-10"
+          className="md:ml-40 mt-40"
           onSubmit={(e) => {
             e.preventDefault();
             tthAction(
@@ -173,7 +179,8 @@ const Forms = () => {
               secondMember,
               thirdMember,
               fourthMember,
-              collegeName
+              collegeName,
+              transactionId
             )
               .then(() => {
                 toast(
@@ -264,6 +271,19 @@ const Forms = () => {
                     value={collegeName}
                     onChange={(e) => setCollegeName(e.target.value)}
                   />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Transaction ID"
+                    className="mx-4 w-56 md:w-56 m-4 p-1 rounded-lg"
+                    required
+                    value={transactionId}
+                    onChange={(e) => setTransactionId(e.target.value)}
+                  />
+                </div>
+                <div className="flex justify-center p-4">
+                  <Scanner />
                 </div>
                 <div className="flex  justify-center mt-4">
                   <input type="checkbox" className="mx-4 w-3" required />I have

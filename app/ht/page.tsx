@@ -11,14 +11,19 @@ import { toast, ToastContainer } from "react-toastify";
 import { HackathonAction } from "../action/action";
 import Image from "next/image";
 import Link from "next/link";
+import Scanner from "./ui/scanner";
 // import { Nav } from "../LS/page";
+
+type OmitWithTag<T, K extends keyof T> = Omit<T, K> & {
+  [P in keyof T]: T[P] extends (...args: any[]) => JSX.Element ? T[P] : string;
+};
 
 export default function Hackthon() {
   return (
     <div>
       <Nav />
       <TypingText
-        text="  Prizes upto 50K"
+        text=" Prizes upto 50K"
         className="text-yellow-400 text-2xl"
       />
       <ToastContainer position="top-right" hideProgressBar />
@@ -113,7 +118,15 @@ const Ht = () => {
 };
 
 export function CycleText() {
-  const words = [
+  type WordType = {
+    name: string;
+    link?: string;
+  };
+
+  // Using OmitWithTag to ensure that the 'name' property is a string and 'link' is optional
+  type OmittedWordType = OmitWithTag<WordType, "link">;
+
+  const words: OmittedWordType[] = [
     { name: "More events" },
     { name: "Hackathon", link: "ht" },
     { name: "Geeks vs Geeks", link: "gvg" },
@@ -371,7 +384,7 @@ const Forms = () => {
   const [submit, setSubmit] = useState(false);
   return (
     <section id="register">
-      {!submit ? (
+      {submit ? (
         <div className="flex flex-col items-center justify-center pb-40">
           <p className="font-bold text-yellow-500 text-3xl text-center">
             {/* Thank You For Registering */}
@@ -490,15 +503,8 @@ const Forms = () => {
                     onChange={(e) => setTransactionId(e.target.value)}
                   />
                 </div>
-                <div className="flex flex-col items-center">
-                  <p>Transaction Screenshot:</p>
-                  <input
-                    type="file"
-                    accept="image/png,image/jpg,image/jpeg"
-                    placeholder="Transaction Screenshot"
-                    className="mx-4 w-56 p-1 rounded-lg"
-                    required
-                  />
+                <div className="flex justify-center p-4">
+                  <Scanner />
                 </div>
                 <div className="flex  justify-center mt-4">
                   <input type="checkbox" className="mx-4 w-3" required />I have
@@ -597,7 +603,7 @@ interface TypingTextProps {
    * Applies only when `repeat` is true.
    *
    * @default 1000
-   */ 
+   */
   waitTime?: number;
 
   /**
@@ -721,11 +727,8 @@ function Type({
 
   const words = useMemo(() => text.split(/\s+/), [text]);
   const total = smooth ? words.length : text.length;
-
   useEffect(() => {
-    let interval: NodeJS.Timeout;
-
-    const startTyping = () => {
+    const interval: NodeJS.Timeout = setInterval(() => {
       setIndex((prevDir) => {
         if (
           direction === TypingDirection.Backward &&
@@ -740,9 +743,8 @@ function Type({
         }
         return prevDir + direction;
       });
-    };
+    }, delay);
 
-    interval = setInterval(startTyping, delay);
     return () => clearInterval(interval);
   }, [total, direction, delay]);
 

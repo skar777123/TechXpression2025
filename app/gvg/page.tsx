@@ -3,10 +3,11 @@ import React, { useState } from "react";
 import { CycleText, Nav } from "../ht/page";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { ToastContainer, toast } from "react-toastify";
-import { BoldCopy,   TypingText } from "../ht/page";
+import { BoldCopy, TypingText } from "../ht/page";
 import { gvgAction } from "../action/action";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Scanner from "../ht/ui/scanner";
 
 export default function page() {
   return (
@@ -51,24 +52,28 @@ const GeneralRules = () => {
             Each team must appoint a captain who will be the main point of
             contact.
           </p>{" "}
+          <p className="mb-1">
+            <b>2. </b> Entry fee of Rs.
+            <span className="text-yellow-500">49</span> /- per Team.
+          </p>
           <p className="pb-1">
-            2. Entry fee of Rs. <span className="text-yellow-500">49</span> /-
+            3. Entry fee of Rs. <span className="text-yellow-500">49</span> /-
             per team.
           </p>
           <p className="pb-1">
-            3. All teams must register by{" "}
+            4. All teams must register by{" "}
             <span className="text-yellow-500">25th January 2025</span>. Late
             registrations will not be accepted.
           </p>{" "}
           <p className="pb-1">
-            4. All participants must ensure{" "}
+            5. All participants must ensure{" "}
             <span className="text-yellow-500">
               respectful and fair behavior
             </span>
             .
           </p>
           <p className="pb-1">
-            5. First <span className="text-yellow-500">30 teams</span> only will
+            6. First <span className="text-yellow-500">30 teams</span> only will
             get the opportunity in the Hackathon.
           </p>
         </div>
@@ -166,21 +171,21 @@ const Forms = () => {
   const [submit, setSubmit] = useState(false);
   return (
     <section id="register">
-      {!submit ? (
+      {submit ? (
         <div className="flex flex-col items-center justify-center pb-40">
-          <div className="flex items-center">
-          <p className="font-bold text-yellow-500 text-3xl text-center">
-            {/* Thank You For Registering */}
-            <span className="text-yellow-500">
-              Registration will be starting on
-            </span>
-          </p>
+          <div className="flex justify-center">
+            <p className="font-bold text-yellow-500 text-3xl text-center">
+              {/* Thank You For Registering */}
+              <span className="text-yellow-500">
+                Registration will be starting on
+              </span>
+            </p>
           </div>
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
             {/* More Opportunities for you...Click below */}
             6th January, 2025 on 11:59 AM
           </p>
-          <CycleText /> 
+          <CycleText />
         </div>
       ) : (
         <form
@@ -287,16 +292,8 @@ const Forms = () => {
                     onChange={(e) => setTransactionId(e.target.value)}
                   />
                 </div>
-
-                <div className="flex flex-col ">
-                  <p>Transaction Screenshot:</p>
-                  <input
-                    type="file"
-                    accept="image/png,image/jpg,image/jpeg"
-                    placeholder="Transaction Screenshot"
-                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
-                    required
-                  />
+                <div className="flex justify-center p-4">
+                  <Scanner />
                 </div>
                 <div className="flex  justify-center mt-4">
                   <input type="checkbox" className="mx-4 w-3" required />I have

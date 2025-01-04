@@ -4,9 +4,10 @@ import { CycleText, Nav } from "../ht/page";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { BoldCopy,TypingText } from "../ht/page";
+import { BoldCopy, TypingText } from "../ht/page";
 import { toast, ToastContainer } from "react-toastify";
 import { tsuAction } from "../action/action";
+import Scanner from "../ht/ui/scanner";
 
 export default function page() {
   return (
@@ -53,14 +54,18 @@ const GeneralRules = () => {
             must appoint a leader who will be the main point of contact.
           </p>
           <p className="mb-1">
-            <b>2. </b>All participants must adhere to the B. K. Birla College
+            <b>2. </b> Entry fee of Rs.
+            <span className="text-yellow-500">49</span> /- per Team.
+          </p>
+          <p className="mb-1">
+            <b>3. </b>All participants must adhere to the B. K. Birla College
             Code of Conduct and the events specific{" "}
             <span className="text-yellow-500">
               guidelines, ensuring respectful and fair behavior.
             </span>
           </p>
           <p className="mb-1">
-            <b>2. </b>Event will commence in Central Lawn at{" "}
+            <b>4. </b>Event will commence in Central Lawn at{" "}
             <span className="text-yellow-500">
               10:00 am <span className="text-white">on</span> 31st Feb 2025
             </span>
@@ -153,6 +158,7 @@ const Forms = () => {
   const [thirdMember, setThirdMember] = useState("");
   const [fourthMember, setFourthMember] = useState("");
   const [collegeName, setCollegeName] = useState("");
+  const [transactionId, setTransactionId] = useState("");
   const [submit, setSubmit] = useState(false);
   return (
     <section id="register">
@@ -178,7 +184,8 @@ const Forms = () => {
               secondMember,
               thirdMember,
               fourthMember,
-              collegeName
+              collegeName,
+              transactionId
             )
               .then(() => {
                 toast(
@@ -247,36 +254,40 @@ const Forms = () => {
                   />
                 </div>
 
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Name of second Member  "
-                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
-                    required
-                    value={secondMember}
-                    onChange={(e) => setSecondMember(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Name of third Member  "
-                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
-                    required
-                    value={thirdMember}
-                    onChange={(e) => setThirdMember(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Name of forth Member  "
-                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
-                    required
-                    value={fourthMember}
-                    onChange={(e) => setFourthMember(e.target.value)}
-                  />
-                </div>
+                {type === "Group" ? (
+                  <>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Name of second Member  "
+                        className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
+                        required
+                        value={secondMember}
+                        onChange={(e) => setSecondMember(e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Name of third Member  "
+                        className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
+                        required
+                        value={thirdMember}
+                        onChange={(e) => setThirdMember(e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Name of forth Member  "
+                        className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
+                        required
+                        value={fourthMember}
+                        onChange={(e) => setFourthMember(e.target.value)}
+                      />
+                    </div>
+                  </>
+                ) : null}
                 <div>
                   <input
                     type="text"
@@ -286,6 +297,19 @@ const Forms = () => {
                     value={collegeName}
                     onChange={(e) => setCollegeName(e.target.value)}
                   />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Transaction ID"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
+                    required
+                    value={transactionId}
+                    onChange={(e) => setTransactionId(e.target.value)}
+                  />
+                </div>
+                <div className="flex justify-center p-4">
+                  <Scanner />
                 </div>
                 <div className="flex  justify-center mt-4">
                   <input type="checkbox" className="mx-4 w-3" required />I have

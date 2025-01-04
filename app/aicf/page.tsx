@@ -4,9 +4,10 @@ import { CycleText, Nav } from "../ht/page";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { BoldCopy,   TypingText } from "../ht/page";
+import { BoldCopy, TypingText } from "../ht/page";
 import { toast } from "react-toastify";
 import { aicfAction } from "../action/action";
+import Scanner from "../ht/ui/scanner";
 
 export default function page() {
   return (
@@ -53,24 +54,34 @@ const GeneralRules = () => {
             point of contact.
           </p>
           <p className="mb-1">
-            <b>2. </b> All teams must register by{" "}
+            <b>2. </b> Entry fee of Rs.
+            <span className="text-yellow-500">49</span> /- per Team.
+          </p>
+          <p className="mb-1">
+            <b>3. </b> Entry fee of Rs.
+            <span className="text-yellow-500">149</span> /- per Team.
+          </p>
+          <p className="mb-1">
+            <b>4. </b> All teams must register by{" "}
             <span className="text-yellow-500">25th of January</span>. Late
             registrations will not be accepted. Late registrations will not be
             accepted.
           </p>
           <p className="mb-1">
-            <b>3. </b> The Event is based solving hiiden clues in an Cyber crime
+            <b>5. </b> The Event is based solving hiiden clues in an Cyber crime
             scene with use of{" "}
-            <span className="text-yellow-500">AI and Forensics </span> based on a
-            problem statement.
+            <span className="text-yellow-500">AI and Forensics </span> based on
+            a problem statement.
           </p>
           <p className="mb-1">
-            <b>4. </b> All participants must ensure{" "}
-            <span className="text-yellow-500">respectful and fair behaviour</span>
+            <b>6. </b> All participants must ensure{" "}
+            <span className="text-yellow-500">
+              respectful and fair behaviour
+            </span>
             .
           </p>
           <p className="mb-1">
-            <b>5. </b> First <span className="text-yellow-500">40 Teams </span>{" "}
+            <b>7. </b> First <span className="text-yellow-500">40 Teams </span>{" "}
             only will get Opportuinity in the Hackathon.
           </p>
         </div>
@@ -131,6 +142,7 @@ const Forms = () => {
   const [mobileNumber, setMobileNumber] = useState("");
   const [secondMember, setSecondMember] = useState("");
   const [collegeName, setCollegeName] = useState("");
+  const [transactionId, setTransactionId] = useState("");
   const [submit, setSubmit] = useState(false);
   return (
     <section id="register">
@@ -154,7 +166,8 @@ const Forms = () => {
               mobileNumber,
               collegeName,
               firstMember,
-              secondMember
+              secondMember,
+              transactionId
             )
               .then(() => {
                 toast(
@@ -245,6 +258,19 @@ const Forms = () => {
                     value={collegeName}
                     onChange={(e) => setCollegeName(e.target.value)}
                   />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Transaction ID"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
+                    required
+                    value={transactionId}
+                    onChange={(e) => setTransactionId(e.target.value)}
+                  />
+                </div>
+                <div className="flex justify-center p-4">
+                  <Scanner />
                 </div>
                 <div className="flex  justify-center mt-4">
                   <input type="checkbox" className="mx-4 w-3" required />I have

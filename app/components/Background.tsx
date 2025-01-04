@@ -94,7 +94,7 @@ const Nav = () => {
   return (
     <div className="flex justify-between">
       <div>
-        <Image 
+        <Image
           width={80}
           height={80}
           src="/TX.png"
@@ -259,7 +259,7 @@ const ParallaxImages = () => {
         alt="TXB"
         start={-300}
         end={200}
-        className="m-auto w-9/12 md:w-1/3"
+        className= "md:mr-auto w-2/4 md:w-1/3"
       />
     </div>
   );
@@ -339,6 +339,12 @@ const Schedule = () => {
         title="AI Cyber Forensics"
         date="1st Feb"
         location="IOT Lab, NR-Building"
+      />
+      <ScheduleItem
+        href="/ds"
+        title="Data Sprint"
+        date="1st Feb"
+        location="M.Fin Lab, IT-Building"
       />
     </section>
   );
