@@ -168,17 +168,19 @@ const Forms = () => {
     <section id="register">
       {!submit ? (
         <div className="flex flex-col items-center justify-center pb-40">
+          <div className="flex items-center">
           <p className="font-bold text-yellow-500 text-3xl text-center">
             {/* Thank You For Registering */}
             <span className="text-yellow-500">
               Registration will be starting on
             </span>
           </p>
+          </div>
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
             {/* More Opportunities for you...Click below */}
             6th January, 2025 on 11:59 AM
           </p>
-          <CycleText />
+          {/* <CycleText /> */}
         </div>
       ) : (
         <form
@@ -214,7 +216,7 @@ const Forms = () => {
             <div className="flex flex-wrap md:flex-nowrap gap-4 ">
               <div className="flex flex-col">
                 <div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="Team Name"
                     className="mx-4 w-56 md:w-96 m-4"
@@ -224,7 +226,7 @@ const Forms = () => {
                   />
                 </div>
                 <div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="Leaders Name"
                     className="mx-4 w-56 md:w-96 m-4"
@@ -234,7 +236,7 @@ const Forms = () => {
                   />
                 </div>
                 <div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="Mobile Number"
                     className="mx-4 w-56 md:w-96 m-4"
@@ -245,7 +247,7 @@ const Forms = () => {
                 </div>
 
                 <div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="Name of second Member  "
                     className="mx-4 w-56 md:w-96 m-4"
@@ -255,7 +257,7 @@ const Forms = () => {
                   />
                 </div>
                 <div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="Name of third Member  "
                     className="mx-4 w-56 md:w-96 m-4"
@@ -266,7 +268,7 @@ const Forms = () => {
                 </div>
 
                 <div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="College Name"
                     className="mx-4 w-56 md:w-96 m-4"
@@ -276,7 +278,7 @@ const Forms = () => {
                   />
                 </div>
                 <div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="Transaction ID"
                     className="mx-4 w-56 md:w-96 m-4"
@@ -288,7 +290,7 @@ const Forms = () => {
 
                 <div className="flex flex-col ">
                   <p>Transaction Screenshot:</p>
-                  <Input
+                  <input
                     type="file"
                     accept="image/png,image/jpg,image/jpeg"
                     placeholder="Transaction Screenshot"
@@ -297,7 +299,7 @@ const Forms = () => {
                   />
                 </div>
                 <div className="flex  justify-center mt-4">
-                  <Input type="checkbox" className="mx-4 w-3" required />I have
+                  <input type="checkbox" className="mx-4 w-3" required />I have
                   read and agree to the all rules, terms and conditions
                 </div>
                 <div className="flex flex-col items-center mt-4">

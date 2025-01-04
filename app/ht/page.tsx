@@ -144,7 +144,7 @@ export function CycleText() {
             transition={{ duration: 1.5 }}
             className="inline-block font-mono text-xl text-yellow-500 "
           >
-            <Link href={words[index]?.link}>{words[index].name}</Link>
+            <Link href={words[index]?.link || ""}>{words[index].name}</Link>
           </motion.h1>
         </AnimatePresence>
       </span>
@@ -418,7 +418,7 @@ const Forms = () => {
               <div className="flex flex-col">
                 <div className="flex flex-col md:flex-row  items-center m-2">
                   <div>
-                    <Input
+                    <input
                       type="text"
                       placeholder="Team Name"
                       className="mx-4 w-56"
@@ -427,7 +427,7 @@ const Forms = () => {
                       onChange={(e) => setTeamName(e.target.value)}
                     />
                   </div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="Leaders Name"
                     className="mx-4 w-56"
@@ -435,7 +435,7 @@ const Forms = () => {
                     value={leaderName}
                     onChange={(e) => setLeaderName(e.target.value)}
                   />
-                  <Input
+                  <input
                     type="text"
                     placeholder="Mobile Number"
                     className="mx-4 w-56"
@@ -445,7 +445,7 @@ const Forms = () => {
                   />
                 </div>
                 <div className="flex flex-col md:flex-row   items-center m-2">
-                  <Input
+                  <input
                     type="text"
                     placeholder="Name of second Member  "
                     className="mx-4 w-56"
@@ -453,7 +453,7 @@ const Forms = () => {
                     value={secondMember}
                     onChange={(e) => setSecondMember(e.target.value)}
                   />
-                  <Input
+                  <input
                     type="text"
                     placeholder="Name of third Member  "
                     className="mx-4 w-56"
@@ -461,7 +461,7 @@ const Forms = () => {
                     value={thirdMember}
                     onChange={(e) => setThirdMember(e.target.value)}
                   />
-                  <Input
+                  <input
                     type="text"
                     placeholder="Name of fourth Member  "
                     className="mx-4 w-56"
@@ -471,7 +471,7 @@ const Forms = () => {
                   />
                 </div>
                 <div className="flex flex-col md:flex-row  items-center m-2 justify-center">
-                  <Input
+                  <input
                     type="text"
                     placeholder="College Name"
                     className="mx-4 w-56"
@@ -479,7 +479,7 @@ const Forms = () => {
                     value={collegeName}
                     onChange={(e) => setCollegeName(e.target.value)}
                   />
-                  <Input
+                  <input
                     type="text"
                     placeholder="Transaction ID"
                     className="mx-4 w-56"
@@ -490,7 +490,7 @@ const Forms = () => {
                 </div>
                 <div className="flex flex-col items-center">
                   <p>Transaction Screenshot:</p>
-                  <Input
+                  <input
                     type="file"
                     accept="image/png,image/jpg,image/jpeg"
                     placeholder="Transaction Screenshot"
@@ -499,7 +499,7 @@ const Forms = () => {
                   />
                 </div>
                 <div className="flex  justify-center mt-4">
-                  <Input type="checkbox" className="mx-4 w-3" required />I have
+                  <input type="checkbox" className="mx-4 w-3" required />I have
                   read and agree to the all rules, terms and conditions
                 </div>
                 <div className="flex flex-col items-center mt-4">
@@ -529,22 +529,21 @@ const tourney = Tourney({
 });
 
 export const Input = React.forwardRef<
-HTMLInputElement,
-React.ComponentProps<"input">
+  HTMLInputElement,
+  React.ComponentProps<"input">
 >(({ className, type, ...props }, ref) => {
-return (
-  <input
-    type={type}
-    className={cn(
-      "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-      className
-    )}
-    ref={ref}
-    {...props}
-  />
-);
+  return (
+    <input
+      type={type}
+      className={cn(
+        "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        className
+      )}
+      ref={ref}
+      {...props}
+    />
+  );
 });
-
 Input.displayName = "Input";
 
 interface TypingTextProps {

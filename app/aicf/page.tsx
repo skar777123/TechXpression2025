@@ -178,7 +178,7 @@ const Forms = () => {
                 <div className="flex flex-row">
                   <label>Type: </label>
                   <div className="flex flex-row items-center">
-                    <Input
+                    <input
                       type="radio"
                       name="type"
                       placeholder="Team Name"
@@ -190,7 +190,7 @@ const Forms = () => {
                     <p>Duo</p>
                   </div>
                   <div className="flex flex-row items-center">
-                    <Input
+                    <input
                       type="radio"
                       name="type"
                       placeholder="Team Name"
@@ -203,7 +203,7 @@ const Forms = () => {
                   </div>
                 </div>
                 <div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="Participant Name"
                     className="mx-4 w-96 m-4"
@@ -213,7 +213,7 @@ const Forms = () => {
                   />
                 </div>
                 <div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="Mobile Number"
                     className="mx-4 w-96 m-4"
@@ -225,7 +225,7 @@ const Forms = () => {
 
                 {type === "Duo" ? (
                   <div>
-                    <Input
+                    <input
                       type="text"
                       placeholder="Name of second Member  "
                       className="mx-4 w-96 m-4"
@@ -237,7 +237,7 @@ const Forms = () => {
                 ) : null}
 
                 <div>
-                  <Input
+                  <input
                     type="text"
                     placeholder="College Name"
                     className="mx-4 w-96 m-4"
@@ -247,7 +247,7 @@ const Forms = () => {
                   />
                 </div>
                 <div className="flex  justify-center mt-4">
-                  <Input type="checkbox" className="mx-4 w-3" required />I have
+                  <input type="checkbox" className="mx-4 w-3" required />I have
                   read and agree to the all rules, terms and conditions
                 </div>
                 <div className="flex flex-col items-center mt-4">

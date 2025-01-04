@@ -32,7 +32,7 @@ export default function ContactPage() {
           </div>
         ) : (
           <form
-            className="h-screen"
+            className="sh-screen"
             onSubmit={(e) => {
               e.preventDefault();
               contact(name, email, phone, college, msg)
@@ -53,7 +53,7 @@ export default function ContactPage() {
             </div>
             <div className="flex flex-col items-center">
               <div className="m-4">
-                <Input
+                <input
                   placeholder="Name"
                   type="text"
                   className="w-56 md:w-96"
@@ -63,7 +63,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="m-4">
-                <Input
+                <input
                   placeholder="Email"
                   type="email"
                   className="w-56 md:w-96"
@@ -73,7 +73,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="m-4">
-                <Input
+                <input
                   placeholder="Number"
                   type="text"
                   className="w-56 md:w-96"
@@ -83,7 +83,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="m-4">
-                <Input
+                <input
                   placeholder="College Name"
                   type="text"
                   className="w-56 md:w-96"
@@ -93,7 +93,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="m-4">
-                <Input
+                <input
                   placeholder="Message"
                   type="text"
                   className="w-56 md:w-96"
