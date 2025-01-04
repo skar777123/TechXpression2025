@@ -257,9 +257,9 @@ const ParallaxImages = () => {
       <ParallaxImg
         src="/TXB.jpg"
         alt="TXB"
-        start={400}
+        start={-300}
         end={200}
-        className="m-auto w-9/12"
+        className="m-auto w-9/12 md:w-1/3"
       />
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Nav } from "../ht/page";
+import { CycleText, Nav } from "../ht/page";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -24,7 +24,7 @@ export default function page() {
         textClassName="text-yellow-100 text-center"
       />
       <div className="mb-8 mt-6 flex justify-center">
-        {/* <CycleText /> */}
+        <CycleText />
       </div>
       <div className="md:flex md:flex-row">
         <GeneralRules />
@@ -164,7 +164,7 @@ const Forms = () => {
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
             More Opportunities for you...Click below
           </p>
-          {/* <CycleText /> */}
+          <CycleText />
         </div>
       ) : (
         <form
@@ -230,7 +230,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Leaders Name"
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={leaderName}
                     onChange={(e) => setLeaderName(e.target.value)}
@@ -240,7 +240,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Mobile Number"
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={mobileNumber}
                     onChange={(e) => setMobileNumber(e.target.value)}
@@ -251,7 +251,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Name of second Member  "
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={secondMember}
                     onChange={(e) => setSecondMember(e.target.value)}
@@ -261,7 +261,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Name of third Member  "
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={thirdMember}
                     onChange={(e) => setThirdMember(e.target.value)}
@@ -271,7 +271,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Name of forth Member  "
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={fourthMember}
                     onChange={(e) => setFourthMember(e.target.value)}
@@ -281,7 +281,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="College Name"
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={collegeName}
                     onChange={(e) => setCollegeName(e.target.value)}

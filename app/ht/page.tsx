@@ -5,7 +5,7 @@ import { Tourney } from "next/font/google";
 import { ArrowRight } from "lucide-react";
 import { ReactNode, useEffect, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
-// import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { HiTrophy } from "react-icons/hi2";
 import { toast, ToastContainer } from "react-toastify";
 import { HackathonAction } from "../action/action";
@@ -106,53 +106,53 @@ const Ht = () => {
           className="text-lg ml-10 mb-5  md:ml-auto "
           href="#register"
         />
-        {/* <CycleText /> */}
+        <CycleText />
       </div>
     </div>
   );
 };
 
-// export function CycleText() {
-//   const words = [
-//     { name: "More events" },
-//     { name: "Hackathon", link: "ht" },
-//     { name: "Geeks vs Geeks", link: "gvg" },
-//     { name: "Tech Treasure Hunt", link: "tth" },
-//     { name: "TechStar Unplugged", link: "tsu" },
-//     { name: "AIcons", link: "aic" },
-//     { name: "AI Cyber Forensics", link: "aicf" },
-//   ];
+export function CycleText() {
+  const words = [
+    { name: "More events" },
+    { name: "Hackathon", link: "ht" },
+    { name: "Geeks vs Geeks", link: "gvg" },
+    { name: "Tech Treasure Hunt", link: "tth" },
+    { name: "TechStar Unplugged", link: "tsu" },
+    { name: "AIcons", link: "aic" },
+    { name: "AI Cyber Forensics", link: "aicf" },
+  ];
 
-//   const [index, setIndex] = useState(0);
-//   const total = words.length;
+  const [index, setIndex] = useState(0);
+  const total = words.length;
 
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setIndex((current) => (current + 1) % total);
-//     }, 1300);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((current) => (current + 1) % total);
+    }, 1300);
 
-//     return () => clearInterval(interval);
-//   }, [total]);
+    return () => clearInterval(interval);
+  }, [total]);
 
-//   return (
-//     <div>
-//       <span className="font-mono text-xl text-yellow-500">
-//         <AnimatePresence mode="wait">
-//           <motion.h1
-//             key={`words_${index}`}
-//             initial={{ opacity: 1, y: 30 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             exit={{ opacity: 0, y: -30 }}
-//             transition={{ duration: 1.5 }}
-//             className="inline-block font-mono text-xl text-yellow-500"
-//           >
-//             <Link href={words[index]?.link || ""}>{words[index].name}</Link>
-//           </motion.h1>
-//         </AnimatePresence>
-//       </span>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      <span className="font-mono text-xl text-yellow-500">
+        <AnimatePresence mode="wait">
+          <motion.h1
+            key={`words_${index}`}
+            initial={{ opacity: 1, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 1.5 }}
+            className="inline-block font-mono text-xl text-yellow-500"
+          >
+            <Link href={words[index]?.link || ""}>{words[index].name}</Link>
+          </motion.h1>
+        </AnimatePresence>
+      </span>
+    </div>
+  );
+}
 
 function RegButton({ text, className, href }: IGetStartedButtonProps) {
   return (
@@ -423,7 +423,7 @@ const Forms = () => {
                     <input
                       type="text"
                       placeholder="Team Name"
-                      className="mx-4 w-56"
+                      className="mx-4 w-56 p-1 rounded-lg"
                       required
                       value={teamName}
                       onChange={(e) => setTeamName(e.target.value)}
@@ -432,7 +432,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Leaders Name"
-                    className="mx-4 w-56"
+                    className="mx-4 w-56 p-1 rounded-lg"
                     required
                     value={leaderName}
                     onChange={(e) => setLeaderName(e.target.value)}
@@ -440,7 +440,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Mobile Number"
-                    className="mx-4 w-56"
+                    className="mx-4 w-56 p-1 rounded-lg"
                     required
                     value={mobileNumber}
                     onChange={(e) => setMobileNumber(e.target.value)}
@@ -450,7 +450,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Name of second Member  "
-                    className="mx-4 w-56"
+                    className="mx-4 w-56 p-1 rounded-lg"
                     required
                     value={secondMember}
                     onChange={(e) => setSecondMember(e.target.value)}
@@ -458,7 +458,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Name of third Member  "
-                    className="mx-4 w-56"
+                    className="mx-4 w-56 p-1 rounded-lg"
                     required
                     value={thirdMember}
                     onChange={(e) => setThirdMember(e.target.value)}
@@ -466,7 +466,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Name of fourth Member  "
-                    className="mx-4 w-56"
+                    className="mx-4 w-56 p-1 rounded-lg"
                     required
                     value={fourthMember}
                     onChange={(e) => setFourthMember(e.target.value)}
@@ -476,7 +476,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="College Name"
-                    className="mx-4 w-56"
+                    className="mx-4 w-56 p-1 rounded-lg"
                     required
                     value={collegeName}
                     onChange={(e) => setCollegeName(e.target.value)}
@@ -484,7 +484,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Transaction ID"
-                    className="mx-4 w-56"
+                    className="mx-4 w-56 p-1 rounded-lg"
                     required
                     value={transactionId}
                     onChange={(e) => setTransactionId(e.target.value)}
@@ -496,7 +496,7 @@ const Forms = () => {
                     type="file"
                     accept="image/png,image/jpg,image/jpeg"
                     placeholder="Transaction Screenshot"
-                    className="mx-4 w-56"
+                    className="mx-4 w-56 p-1 rounded-lg"
                     required
                   />
                 </div>
@@ -597,8 +597,7 @@ interface TypingTextProps {
    * Applies only when `repeat` is true.
    *
    * @default 1000
-   *
-   */
+   */ 
   waitTime?: number;
 
   /**
@@ -724,7 +723,6 @@ function Type({
   const total = smooth ? words.length : text.length;
 
   useEffect(() => {
-    // eslint-disable-next-line prefer-const
     let interval: NodeJS.Timeout;
 
     const startTyping = () => {
@@ -779,7 +777,7 @@ function Type({
       {!grow && <div className="invisible">{text}</div>}
       <div
         className={cn({
-          "  flex justify-center items-center  inset-0   ": !grow,
+          "flex justify-center items-center inset-0": !grow,
         })}
       >
         <HiTrophy />

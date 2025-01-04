@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Nav } from "../ht/page";
+import { CycleText, Nav } from "../ht/page";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { ToastContainer, toast } from "react-toastify";
 import { BoldCopy,   TypingText } from "../ht/page";
@@ -24,7 +24,7 @@ export default function page() {
         textClassName="text-blue-100"
       />
       <div className="mb-14 mt-6 flex justify-center">
-        {/* <CycleText /> */}
+        <CycleText />
       </div>
       <div className="flex flex-col md:flex-row ">
         <GeneralRules />
@@ -180,7 +180,7 @@ const Forms = () => {
             {/* More Opportunities for you...Click below */}
             6th January, 2025 on 11:59 AM
           </p>
-          {/* {/* <CycleText /> */} 
+          <CycleText /> 
         </div>
       ) : (
         <form
@@ -219,7 +219,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Team Name"
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={teamName}
                     onChange={(e) => setTeamName(e.target.value)}
@@ -229,7 +229,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Leaders Name"
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={leaderName}
                     onChange={(e) => setLeaderName(e.target.value)}
@@ -239,7 +239,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Mobile Number"
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={mobileNumber}
                     onChange={(e) => setMobileNumber(e.target.value)}
@@ -250,7 +250,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Name of second Member  "
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={secondMember}
                     onChange={(e) => setSecondMember(e.target.value)}
@@ -260,7 +260,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Name of third Member  "
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={thirdMember}
                     onChange={(e) => setThirdMember(e.target.value)}
@@ -271,7 +271,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="College Name"
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={collegeName}
                     onChange={(e) => setCollegeName(e.target.value)}
@@ -281,7 +281,7 @@ const Forms = () => {
                   <input
                     type="text"
                     placeholder="Transaction ID"
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                     value={transactionId}
                     onChange={(e) => setTransactionId(e.target.value)}
@@ -294,7 +294,7 @@ const Forms = () => {
                     type="file"
                     accept="image/png,image/jpg,image/jpeg"
                     placeholder="Transaction Screenshot"
-                    className="mx-4 w-56 md:w-96 m-4"
+                    className="mx-4 w-56 md:w-96 m-4 p-1 rounded-lg"
                     required
                   />
                 </div>

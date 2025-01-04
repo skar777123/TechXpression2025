@@ -3,14 +3,14 @@
 import prisma from "../db/db";
 
 export const HackathonAction = async (
-  teamName,
-  leaderName,
-  mobileNumber,
-  secondMember,
-  thirdMember,
-  fourthMember,
-  collegeName,
-  transactionId
+  teamName : string,
+  leaderName: string,
+  mobileNumber: string,
+  secondMember: string,
+  thirdMember: string,
+  fourthMember: string,
+  collegeName: string,
+  transactionId: string
 ) => {
   await prisma.hackathon.create({
     data: {
@@ -27,13 +27,13 @@ export const HackathonAction = async (
 };
 
 export const gvgAction = async (
-  teamName,
-  leaderName,
-  mobileNumber,
-  secondMember,
-  thirdMember,
-  collegeName,
-  transactionId
+  teamName: string,
+  leaderName: string,
+  mobileNumber: string,
+  secondMember: string,
+  thirdMember: string,
+  collegeName: string,
+  transactionId: string
 ) => {
   await prisma.gvG.create({
     data: {
@@ -49,13 +49,13 @@ export const gvgAction = async (
 };
 
 export const tthAction = async (
-  teamName,
-  leaderName,
-  mobileNumber,
-  secondMember,
-  thirdMember,
-  fourthMember,
-  collegeName
+  teamName: string,
+  leaderName: string,
+  mobileNumber: string,
+  secondMember: string,
+  thirdMember: string,
+  fourthMember: string,
+  collegeName: string
 ) => {
   await prisma.techTH.create({
     data: {
@@ -71,13 +71,13 @@ export const tthAction = async (
 };
 
 export const tsuAction = async (
-  type,
-  leaderName,
-  mobileNumber,
-  secondMember,
-  thirdMember,
-  fourthMember,
-  collegeName
+  type: string,
+  leaderName: string,
+  mobileNumber: string,
+  secondMember: string,
+  thirdMember: string,
+  fourthMember: string,
+  collegeName: string
 ) => {
   await prisma.techStar_Unplugged.create({
     data: {
@@ -93,11 +93,11 @@ export const tsuAction = async (
 };
 
 export const aicAction = async (
-  type,
-  mobileNumber,
-  collegeName,
-  firstMember,
-  secondMember
+  type: string,
+  mobileNumber: string,
+  collegeName: string,
+  firstMember: string,
+  secondMember: string
 ) => {
   await prisma.aicons.create({
     data: {
@@ -111,11 +111,11 @@ export const aicAction = async (
 };
 
 export const aicfAction = async (
-  type,
-  mobileNumber,
-  collegeName,
-  firstMember,
-  secondMember
+  type: string,
+  mobileNumber: string,
+  collegeName: string,
+  firstMember: string,
+  secondMember: string
 ) => {
   await prisma.aiCF.create({
     data: {
@@ -128,7 +128,7 @@ export const aicfAction = async (
   });
 };
 
-export const contact = async (name1, email, phone, college, msg) => {
+export const contact = async (name1: string, email: string, phone: string, college: string, msg: string) => {
   await prisma.contact.create({
     data: {
       name: name1,
