@@ -7,7 +7,7 @@ export default async function page({ params }) {
   if (params.id == "Sanskar" || params.id == "Akash" || params.id == "Aditya") {
     return (
       <div>
-            <div >
+            <div className="h-screen">
               <h1>{Hackthon?.TeamName}</h1>
               <p>{Hackthon?.Leader}</p>
             </div>

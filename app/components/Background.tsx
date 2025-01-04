@@ -95,11 +95,11 @@ const Nav = () => {
     <div className="flex justify-between">
       <div>
         <Image 
-          width={20}
-          height={20}
+          width={80}
+          height={80}
           src="/TX.png"
           alt="TechXpression"
-          className="fixed w-16 ml-4 mt-2"
+          className="fixed ml-4 mt-2"
         />
       </div>
       <div
