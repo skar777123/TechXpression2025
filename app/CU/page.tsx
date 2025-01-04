@@ -32,7 +32,7 @@ export default function ContactPage() {
           </div>
         ) : (
           <form
-            className="sh-screen"
+            className="h-screen"
             onSubmit={(e) => {
               e.preventDefault();
               contact(name, email, phone, college, msg)
