@@ -23,7 +23,7 @@ export default function page() {
       <div className="flex flex-col items-center justify-center ">
         <CycleText />
       </div>
-      <div className="flex flex-row mt-10 items-center justify-center ">
+      <div className="md:flex md:flex-row ">
         <GeneralRules />
         <Forms />
       </div>
@@ -33,7 +33,7 @@ export default function page() {
 
 const GeneralRules = () => {
   return (
-    <div className=" flex flex-col items-center justify-center py-10 w-[90%] ml-6 md:w-[40%] md:ml-20">
+    <div className=" flex flex-col items-center justify-center py-10 w-[87%] ml-6 md:w-[40%] md:ml-20">
       <p className="text-lg font-bold">
         Rules and <span className="text-yellow-500">Regulations</span>
       </p>
@@ -113,7 +113,7 @@ const GeneralRules = () => {
             </span>
             <br />
             <span className="pl-8">
-            OpenRefine, FeatureTools, PyOD and Fraud Detection APIs.
+              OpenRefine, FeatureTools, PyOD and Fraud Detection APIs.
             </span>
           </p>
         </div>
@@ -132,8 +132,12 @@ const GeneralRules = () => {
             <span className="text-yellow-500"> provided</span>
           </p>
           <p className="mb-1">
-            <b>3. </b> Participants will be responsible for any damage caused to the{" "}
-            <span className="text-yellow-500">equipment, facilites, or systems</span> during the event.
+            <b>3. </b> Participants will be responsible for any damage caused to
+            the{" "}
+            <span className="text-yellow-500">
+              equipment, facilites, or systems
+            </span>{" "}
+            during the event.
           </p>
         </div>
       </div>
@@ -181,7 +185,10 @@ const Forms = () => {
         >
           <div className="flex flex-col items-center pb-10">
             <div className="mb-10 text-center">
-              <span>Last Date for Registration: <span className="text-yellow-500">25th Jan,2025</span></span>
+              <span>
+                Last Date for Registration:{" "}
+                <span className="text-yellow-500">25th Jan,2025</span>
+              </span>
               <p className="text-3xl font-bold">Registration Form:</p>
             </div>
             <div className="flex flex-wrap md:flex-nowrap gap-4 ">
