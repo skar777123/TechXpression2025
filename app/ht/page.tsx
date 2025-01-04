@@ -43,7 +43,7 @@ export default function Hackthon() {
 
 export const Nav = () => {
   return (
-    <div className="flex flex-row ">
+    <div className="flex flex-row md:justify-around">
       <div>
         <Image
           src="/TX.png"
@@ -54,8 +54,8 @@ export const Nav = () => {
         />
       </div>
       <div className=" md:ml-80 ">
-        <nav className=" left-0 right-0 top-0 z-50 flex jus justify-center  px-6 py-8 text-white">
-          <div className="flex flex-row  space-x-10 opacity-40">
+        <nav className=" left-0 right-0 top-0 z-50 flex justify-center  px-6 py-8 text-white">
+          <div className=" flex flex-row justify-between  space-x-10 opacity-60">
             <Link
               href="/"
               className="flex items-center gap-1  text-zinc-400 md:text-lg text-xs"
@@ -231,8 +231,8 @@ const GeneralRules = () => {
             <span className="text-yellow-500">149</span> /- per Team.
           </p>
           <p className="mb-1">
-            <b>3. </b> The Soltutions to Problem Statement should be based on
-            the Theme -<br />
+            <b>3. </b> The Solutions to Problem Statement should be based on the
+            Theme -<br />
             <span className="text-yellow-500">
               Artificial Intelligence and Cybersecurity
             </span>
@@ -429,7 +429,10 @@ const Forms = () => {
             <div className="mb-10 text-center">
               <span>
                 Last Date for Registration:{" "}
-                <span className="text-yellow-500">20th Jan,2025</span>
+                <span className="text-yellow-500">20th Jan,2025</span><br/>
+                <span className="text-yellow-500">
+                  On spot Registration not acceptable
+                </span>
               </span>
               <p className="text-3xl font-bold">Registration Form:</p>
             </div>

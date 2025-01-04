@@ -197,11 +197,21 @@ const CenterImage = () => {
 
   return (
     <>
-      <div className="absolute flex left-[1%]  md:left-[26%]   justify-center items-center  mt-6">
+      <div className="absolute flex w-[100%]   justify-center items-center  mt-4">
         <div className="flex flex-col justify-center items-center text-center  md:text-2xl text-s font-bold">
           <p>
-            B. K. Birla College, Kalyan <br />
-            (Empowered Autonomous Status)
+            <span className="text-2xl md:text-2xl">
+              B. K. Birla College, Kalyan
+            </span>
+            <br />
+            <span className="text-s md:text-sm">
+              (Empowered Autonomous Status) <br />
+              Conducted by Kalyan Citizens'
+              <br />
+              Education Society Affiliated to University of Mumbai
+              <br /> Reaccredited by NAAC (4th Cycle) with ‘A++’ Grade (CGPA –
+              3.51) | ISO 9001: 2015 Certified
+            </span>
             <br />
             <br />
           </p>
@@ -216,7 +226,7 @@ const CenterImage = () => {
         </div>
       </div>
       <motion.div
-        className="sticky top-0 h-screen w-full bg-img-inherit"
+        className="sticky top-0 h-screen w-full  bg-img-inherit"
         style={{
           clipPath,
           backgroundSize,
@@ -259,7 +269,7 @@ const ParallaxImages = () => {
         alt="TXB"
         start={-300}
         end={200}
-        className= "md:mr-auto w-2/4 md:w-1/3"
+        className="md:mr-auto w-2/4 md:w-1/3"
       />
     </div>
   );

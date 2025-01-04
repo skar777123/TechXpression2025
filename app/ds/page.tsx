@@ -188,6 +188,10 @@ const Forms = () => {
               <span>
                 Last Date for Registration:{" "}
                 <span className="text-yellow-500">25th Jan,2025</span>
+                <br />
+                <span className="text-yellow-500">
+                  On spot Registration not acceptable
+                </span>
               </span>
               <p className="text-3xl font-bold">Registration Form:</p>
             </div>

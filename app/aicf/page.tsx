@@ -82,7 +82,7 @@ const GeneralRules = () => {
           </p>
           <p className="mb-1">
             <b>7. </b> First <span className="text-yellow-500">40 Teams </span>{" "}
-            only will get Opportuinity in the Hackathon.
+            only will get Opportuinity in the AI Cyber Forensics.
           </p>
         </div>
       </div>
@@ -106,7 +106,7 @@ const GeneralRules = () => {
             <br />
             o Description
             <br />
-            o Presentation (if required)
+            o Presentation 
             <br />
           </p>
         </div>
@@ -183,8 +183,15 @@ const Forms = () => {
           }}
         >
           <div className="flex flex-col items-center pb-10">
-          <div className="mb-10 text-center">
-              <span>Last Date for Registration: <span className="text-yellow-500">25th Jan,2025</span></span>
+            <div className="mb-10 text-center">
+              <span>
+                Last Date for Registration:{" "}
+                <span className="text-yellow-500">25th Jan,2025</span>
+                <br />
+                <span className="text-yellow-500">
+                  On spot Registration not acceptable
+                </span>
+              </span>
               <p className="text-3xl font-bold">Registration Form:</p>
             </div>
             <div className="flex flex-wrap md:flex-nowrap gap-4 ">

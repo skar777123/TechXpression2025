@@ -74,7 +74,7 @@ const GeneralRules = () => {
           </p>
           <p className="pb-1">
             6. First <span className="text-yellow-500">30 teams</span> only will
-            get the opportunity in the Hackathon.
+            get the opportunity in the AIcons.
           </p>
         </div>
       </div>
@@ -141,7 +141,7 @@ const GeneralRules = () => {
           <p>
             1. Teams must press the buzzer to answer. The first to press the
             buzzer gets the chance to answer first.{" "}
-            <span className="text-yellow-500">Unnecessary buzzer presses</span>
+            <span className="text-yellow-500">Unnecessary buzzer presses</span>{""}
             will result in disqualification.{" "}
           </p>
           <p>
@@ -218,6 +218,10 @@ const Forms = () => {
             <div className="mb-10">
               <p className="text-3xl font-bold">Registration Form:</p>
             </div>
+            <br />
+            <span className="text-yellow-500">
+              On spot Registration not acceptable
+            </span>
             <div className="flex flex-wrap md:flex-nowrap gap-4 ">
               <div className="flex flex-col">
                 <div>
