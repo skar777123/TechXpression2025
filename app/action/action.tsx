@@ -153,3 +153,19 @@ export const contact = async (
     },
   });
 };
+
+export const dsprint = async (
+  firstMember: string,
+  mobileNumber: string,
+  collegeName: string,
+  transactionId: string
+) => {
+  await prisma.dataSprint.create({
+    data: {
+      name: firstMember,
+      Number: mobileNumber,
+      College: collegeName,
+      TransactionId: transactionId,
+    },
+  });
+};

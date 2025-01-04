@@ -48,9 +48,9 @@ export const Nav = () => {
         <Image
           src="/TX.png"
           alt="TechXpression "
-          width={20}
-          height={20}
-          className=" mix-blend-difference md:w-20 w-10 mx-6 my-2"
+          width={80}
+          height={80}
+          className=" mix-blend-difference  ml-4 mt-2"
         />
       </div>
       <div className=" md:ml-80 ">
@@ -426,7 +426,11 @@ const Forms = () => {
           }}
         >
           <div className="flex flex-col items-center pb-10">
-            <div className="mb-10">
+            <div className="mb-10 text-center">
+              <span>
+                Last Date for Registration:{" "}
+                <span className="text-yellow-500">20th Jan,2025</span>
+              </span>
               <p className="text-3xl font-bold">Registration Form:</p>
             </div>
             <div className="flex flex-wrap md:flex-nowrap gap-4 ">

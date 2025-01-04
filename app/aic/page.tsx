@@ -220,7 +220,11 @@ const Forms = () => {
           }}
         >
           <div className="flex flex-col items-center pb-10">
-            <div className="mb-10">
+            <div className="mb-10 text-center">
+              <span>
+                Last Date for Registration:{" "}
+                <span className="text-yellow-500">25th Jan,2025</span>
+              </span>
               <p className="text-3xl font-bold">Registration Form:</p>
             </div>
             <div className="flex flex-wrap md:flex-nowrap gap-4 ">

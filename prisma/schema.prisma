@@ -100,11 +100,11 @@ model Contact {
   message     String
 }
 
-model dataSprint{
-  id          Int    @id @default(autoincrement())
-  name        String
-  Number    String
-  College String
+model dataSprint {
+  id            Int      @id @default(autoincrement())
+  name          String
+  Number        String
+  College       String
   TransactionId String
   Created       DateTime @default(now())
   Updated       DateTime @updatedAt

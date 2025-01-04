@@ -22,7 +22,7 @@ export default function ContactPage() {
           <div className="flex flex-col items-center justify-center pb-40">
             <p className="font-bold text-yellow-500 text-3xl text-center">
               {/* Thank You For Registering */}
-              <span className="text-yellow-500">Than You for COntacting</span>
+              <span className="text-yellow-500">Than You for Contacting</span>
             </p>
             <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
               More Opportunities for you...Click below
