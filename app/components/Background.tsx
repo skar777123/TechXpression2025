@@ -197,7 +197,7 @@ const CenterImage = () => {
 
   return (
     <>
-      <div className="absolute flex left-[1%]  md:left-[24%]   justify-center items-center  mt-6">
+      <div className="absolute flex left-[1%]  md:left-[26%]   justify-center items-center  mt-6">
         <div className="flex flex-col justify-center items-center text-center  md:text-2xl text-s font-bold">
           <p>
             B. K. Birla College, Kalyan <br />
