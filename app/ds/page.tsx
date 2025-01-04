@@ -70,7 +70,7 @@ const GeneralRules = () => {
           </p>
           <p className="mb-1">
             <b>6. </b> First <span className="text-yellow-500">40 Teams </span>{" "}
-            only will get Opportuinity in the Data Sprint.
+            only will get Opportunity in the Data Sprint.
           </p>
         </div>
       </div>
