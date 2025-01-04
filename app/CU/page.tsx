@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { CycleText, Nav } from "../ht/page";
-import { Input } from "../ht/page";
+import {  Nav } from "../ht/page";
+// import { Input } from "../ht/page";
 import { ToastContainer, toast } from "react-toastify";
 import { contact } from "../action/action";
 
@@ -28,7 +28,7 @@ export default function ContactPage() {
               More Opportunities for you...Click below
               {/* 6th January, 2025 on 11:59 AM */}
             </p>
-            <CycleText />
+            {/* <CycleText /> */}
           </div>
         ) : (
           <form

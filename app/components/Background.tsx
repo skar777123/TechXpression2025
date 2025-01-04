@@ -12,6 +12,7 @@ import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { useRef, useState } from "react";
 import styles from "./ui/CornerNav.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const orb = Orbitron({
   subsets: ["latin"],
@@ -93,7 +94,9 @@ const Nav = () => {
   return (
     <div className="flex justify-between">
       <div>
-        <img
+        <Image 
+          width={20}
+          height={20}
           src="/TX.png"
           alt="TechXpression"
           className="fixed w-16 ml-4 mt-2"

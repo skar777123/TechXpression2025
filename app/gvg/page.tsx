@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Nav } from "../ht/page";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { ToastContainer, toast } from "react-toastify";
-import { BoldCopy, CycleText, Input, TypingText } from "../ht/page";
+import { BoldCopy,   TypingText } from "../ht/page";
 import { gvgAction } from "../action/action";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -24,7 +24,7 @@ export default function page() {
         textClassName="text-blue-100"
       />
       <div className="mb-14 mt-6 flex justify-center">
-        <CycleText />
+        {/* <CycleText /> */}
       </div>
       <div className="flex flex-col md:flex-row ">
         <GeneralRules />
@@ -180,7 +180,7 @@ const Forms = () => {
             {/* More Opportunities for you...Click below */}
             6th January, 2025 on 11:59 AM
           </p>
-          {/* <CycleText /> */}
+          {/* {/* <CycleText /> */} */}
         </div>
       ) : (
         <form

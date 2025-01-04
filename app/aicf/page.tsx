@@ -4,7 +4,7 @@ import { Nav } from "../ht/page";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { BoldCopy, CycleText, Input, TypingText } from "../ht/page";
+import { BoldCopy,   TypingText } from "../ht/page";
 import { toast } from "react-toastify";
 import { aicfAction } from "../action/action";
 
@@ -23,7 +23,7 @@ export default function page() {
         textClassName="text-blue-100"
       />
       <div className="mb-8 flex justify-center">
-        <CycleText />
+        {/* <CycleText /> */}
       </div>
       <div className="flex flex-row">
         <GeneralRules />
@@ -142,7 +142,7 @@ const Forms = () => {
           <p className="font-bold text-yellow-500 text-3xl mb-16">
             More Opportunities for you...Click below
           </p>
-          <CycleText />
+          {/* <CycleText /> */}
         </div>
       ) : (
         <form

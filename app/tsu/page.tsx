@@ -4,7 +4,7 @@ import { Nav } from "../ht/page";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { BoldCopy, CycleText, Input, TypingText } from "../ht/page";
+import { BoldCopy,TypingText } from "../ht/page";
 import { toast, ToastContainer } from "react-toastify";
 import { tsuAction } from "../action/action";
 
@@ -24,7 +24,7 @@ export default function page() {
         textClassName="text-yellow-100 text-center"
       />
       <div className="mb-8 mt-6 flex justify-center">
-        <CycleText />
+        {/* <CycleText /> */}
       </div>
       <div className="md:flex md:flex-row">
         <GeneralRules />
@@ -164,7 +164,7 @@ const Forms = () => {
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
             More Opportunities for you...Click below
           </p>
-          <CycleText />
+          {/* <CycleText /> */}
         </div>
       ) : (
         <form

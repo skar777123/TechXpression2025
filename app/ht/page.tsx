@@ -106,57 +106,59 @@ const Ht = () => {
           className="text-lg ml-10 mb-5  md:ml-auto "
           href="#register"
         />
-        <CycleText />
+        {/* <CycleText /> */}
       </div>
     </div>
   );
 };
 
-export function CycleText() {
-  const words = [
-    { name: "More events" },
-    { name: "Hackathon", link: "/ht" },
-    { name: "Geeks vs Geeks", link: "/gvg" },
-    { name: "Tech Treasure Hunt", link: "/tth" },
-    { name: "TechStar Unplugged", link: "/tsu" },
-    { name: "AIcons", link: "/aic" },
-    { name: "AI Cyber Forensics", link: "/aicf" },
-  ];
-  const [index, setIndex] = useState(0);
+// export function CycleText() {
+//   const words = [
+//     { name: "More events" },
+//     { name: "Hackathon", link: "ht" },
+//     { name: "Geeks vs Geeks", link: "gvg" },
+//     { name: "Tech Treasure Hunt", link: "tth" },
+//     { name: "TechStar Unplugged", link: "tsu" },
+//     { name: "AIcons", link: "aic" },
+//     { name: "AI Cyber Forensics", link: "aicf" },
+//   ];
 
-  const total = words.length;
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((current) => (current + 1) % total);
-    }, 1300);
-    return () => clearInterval(interval);
-  }, [total]);
+//   const [index, setIndex] = useState(0);
+//   const total = words.length;
 
-  return (
-    <div>
-      <span className="font-mono text-xl text-yellow-500">
-        <AnimatePresence mode="wait">
-          <motion.h1
-            key={`words_${index}`}
-            initial={{ opacity: 1, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 1.5 }}
-            className="inline-block font-mono text-xl text-yellow-500 "
-          >
-            <Link href={words[index]?.link || ""}>{words[index].name}</Link>
-          </motion.h1>
-        </AnimatePresence>
-      </span>
-    </div>
-  );
-}
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setIndex((current) => (current + 1) % total);
+//     }, 1300);
+
+//     return () => clearInterval(interval);
+//   }, [total]);
+
+//   return (
+//     <div>
+//       <span className="font-mono text-xl text-yellow-500">
+//         <AnimatePresence mode="wait">
+//           <motion.h1
+//             key={`words_${index}`}
+//             initial={{ opacity: 1, y: 30 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             exit={{ opacity: 0, y: -30 }}
+//             transition={{ duration: 1.5 }}
+//             className="inline-block font-mono text-xl text-yellow-500"
+//           >
+//             <Link href={words[index]?.link || ""}>{words[index].name}</Link>
+//           </motion.h1>
+//         </AnimatePresence>
+//       </span>
+//     </div>
+//   );
+// }
 
 function RegButton({ text, className, href }: IGetStartedButtonProps) {
   return (
     <div className="min-h-12 mr-10 flex ">
       <Link
-        href={href}
+        href={href || "#"}
         className={cn(
           "group flex  w-26 items-center justify-center gap-3 rounded-lg bg-yellow-500 p-2 font-bold transition-colors duration-100 ease-in-out hover:bg-green-500",
           className
@@ -381,7 +383,7 @@ const Forms = () => {
             {/* More Opportunities for you...Click below */}
             6th January, 2025 on 11:59 AM
           </p>
-          <CycleText />
+          {/* <CycleText /> */}
         </div>
       ) : (
         <form
@@ -528,23 +530,23 @@ const tourney = Tourney({
   subsets: ["latin"],
 });
 
-export const Input = React.forwardRef<
-  HTMLInputElement,
-  React.ComponentProps<"input">
->(({ className, type, ...props }, ref) => {
-  return (
-    <input
-      type={type}
-      className={cn(
-        "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
-        className
-      )}
-      ref={ref}
-      {...props}
-    />
-  );
-});
-Input.displayName = "Input";
+// export const Input = React.forwardRef<
+//   HTMLInputElement,
+//   React.ComponentProps<"input">
+// >(({ className, type, ...props }, ref) => {
+//   return (
+//     <input
+//       type={type}
+//       className={cn(
+//         "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+//         className
+//       )}
+//       ref={ref}
+//       {...props}
+//     />
+//   );
+// });
+// Input.displayName = "Input";
 
 interface TypingTextProps {
   /**
