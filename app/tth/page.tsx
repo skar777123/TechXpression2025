@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { CycleText, Nav } from "../ht/page";
+import { BarLoader, CycleText, Nav } from "../ht/page";
 import { BackgroundBeams } from "../components/ui/background-beams";
 import { ArrowRight } from "lucide-react";
 import { BoldCopy, TypingText } from "../ht/page";
@@ -155,6 +155,7 @@ const Forms = () => {
   const [collegeName, setCollegeName] = useState("");
   const [transactionId, setTransactionId] = useState("");
   const [submit, setSubmit] = useState(false);
+  const [spinner, setSpinner] = useState(false);
   return (
     <section id="register">
       {submit ? (
@@ -172,6 +173,7 @@ const Forms = () => {
           className="md:ml-40 mt-40"
           onSubmit={(e) => {
             e.preventDefault();
+            setSpinner(true);
             tthAction(
               teamName,
               leaderName,
@@ -189,6 +191,7 @@ const Forms = () => {
               })
               .then(() => {
                 setSubmit(true);
+                setSubmit(true);
               })
               .catch((err) => {
                 toast("Registration Failed - Please try again later", err);
@@ -196,121 +199,131 @@ const Forms = () => {
           }}
         >
           <div className="flex flex-col items-center pb-10">
-            <div className="mb-10 text-center">
-              <span>
-                Last Date for Registration:{" "}
-                <span className="text-yellow-500">25th Jan,2025</span><br/>
-              <span className="text-yellow-500">
-                  On spot Registration not acceptable
-                </span>
-              </span>
-              <p className="text-3xl font-bold">Registration Form:</p>
-            </div>
-            <div className="flex flex-wrap md:flex-nowrap gap-4 ">
-              <div className="flex flex-col items-center">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Team Name"
-                    className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
-                    required
-                    value={teamName}
-                    onChange={(e) => setTeamName(e.target.value)}
-                  />
+            {spinner ? (
+              <div className="h-screen flex flex-col items-center mt-10">
+                <BarLoader />
+                <p className="text-yellow-500 font-bold">Registering...</p>
+              </div>
+            ) : (
+              <>
+                <div className="mb-10 text-center">
+                  <span>
+                    Last Date for Registration:{" "}
+                    <span className="text-yellow-500">25th Jan,2025</span>
+                    <br />
+                    <span className="text-yellow-500">
+                      On spot Registration not acceptable
+                    </span>
+                  </span>
+                  <p className="text-3xl font-bold">Registration Form:</p>
                 </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Leaders Name"
-                    className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
-                    required
-                    value={leaderName}
-                    onChange={(e) => setLeaderName(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Mobile Number"
-                    className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
-                    required
-                    value={mobileNumber}
-                    onChange={(e) => setMobileNumber(e.target.value)}
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Name of second Member  "
-                    className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
-                    required
-                    value={secondMember}
-                    onChange={(e) => setSecondMember(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Name of third Member  "
-                    className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
-                    required
-                    value={thirdMember}
-                    onChange={(e) => setThirdMember(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Name of forth Member  "
-                    className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
-                    required
-                    value={fourthMember}
-                    onChange={(e) => setFourthMember(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="College Name"
-                    className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
-                    required
-                    value={collegeName}
-                    onChange={(e) => setCollegeName(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Transaction ID"
-                    className="mx-4 w-56 md:w-56 m-4 p-1 rounded-lg text-black"
-                    required
-                    value={transactionId}
-                    onChange={(e) => setTransactionId(e.target.value)}
-                  />
-                </div>
-                <div className="flex justify-center p-4">
-                  <Scanner />
-                </div>
-                <div className="flex  justify-center mt-4">
-                  <input type="checkbox" className="mx-4 w-3" required />I have
-                  read and agree to the all rules, terms and conditions
-                </div>
-                <div className="flex flex-col items-center mt-4">
-                  <button className="group cursor-pointer rounded-xl border-4 border-yellow-500 border-opacity-0 bg-transparent p-1 transition-all duration-500 hover:border-opacity-100">
-                    <div className="relative flex items-center justify-center gap-4 overflow-hidden rounded-lg text-black bg-yellow-500 p-2 font-bold text-white">
-                      Register
-                      <ArrowRight className="transition-all group-hover:translate-x-2 group-hover:scale-125" />
-                      <div
-                        className={cn(
-                          "absolute -left-16 top-0 h-full w-12 rotate-[30deg] scale-y-150 bg-white/10 transition-all duration-700 group-hover:left-[calc(100%+1rem)]"
-                        )}
+                <div className="flex flex-wrap md:flex-nowrap gap-4 ">
+                  <div className="flex flex-col items-center">
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Team Name"
+                        className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
+                        required
+                        value={teamName}
+                        onChange={(e) => setTeamName(e.target.value)}
                       />
                     </div>
-                  </button>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Leaders Name"
+                        className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
+                        required
+                        value={leaderName}
+                        onChange={(e) => setLeaderName(e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Mobile Number"
+                        className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
+                        required
+                        value={mobileNumber}
+                        onChange={(e) => setMobileNumber(e.target.value)}
+                      />
+                    </div>
+
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Name of second Member  "
+                        className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
+                        required
+                        value={secondMember}
+                        onChange={(e) => setSecondMember(e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Name of third Member  "
+                        className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
+                        required
+                        value={thirdMember}
+                        onChange={(e) => setThirdMember(e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Name of forth Member  "
+                        className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
+                        required
+                        value={fourthMember}
+                        onChange={(e) => setFourthMember(e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="College Name"
+                        className="mx-4 w-56 md:96 m-4 p-1 rounded-lg text-black"
+                        required
+                        value={collegeName}
+                        onChange={(e) => setCollegeName(e.target.value)}
+                      />
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Transaction ID"
+                        className="mx-4 w-56 md:w-56 m-4 p-1 rounded-lg text-black"
+                        required
+                        value={transactionId}
+                        onChange={(e) => setTransactionId(e.target.value)}
+                      />
+                    </div>
+                    <div className="flex justify-center p-4">
+                      <Scanner />
+                    </div>
+                    <div className="flex  justify-center mt-4">
+                      <input type="checkbox" className="mx-4 w-3" required />I
+                      have read and agree to the all rules, terms and conditions
+                    </div>
+                    <div className="flex flex-col items-center mt-4">
+                      <button className="group cursor-pointer rounded-xl border-4 border-yellow-500 border-opacity-0 bg-transparent p-1 transition-all duration-500 hover:border-opacity-100">
+                        <div className="relative flex items-center justify-center gap-4 overflow-hidden rounded-lg text-black bg-yellow-500 p-2 font-bold text-white">
+                          Register
+                          <ArrowRight className="transition-all group-hover:translate-x-2 group-hover:scale-125" />
+                          <div
+                            className={cn(
+                              "absolute -left-16 top-0 h-full w-12 rotate-[30deg] scale-y-150 bg-white/10 transition-all duration-700 group-hover:left-[calc(100%+1rem)]"
+                            )}
+                          />
+                        </div>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </>
+            )}
           </div>
         </form>
       )}
