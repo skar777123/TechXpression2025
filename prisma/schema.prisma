@@ -6,12 +6,12 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url  	    = env("DATABASE_URL")
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
 }
 
 model Hackathon {
-  id                    String   @id @default(cuid())
+  id                    String   @id @default(auto()) @map("_id") @db.ObjectId
   TeamName              String
   Leader                String
   Number                String
@@ -26,7 +26,7 @@ model Hackathon {
 }
 
 model GvG {
-  id                    String   @id @default(cuid())
+  id                    String   @id @default(auto()) @map("_id") @db.ObjectId
   TeamName              String
   Leader                String
   Number                String
@@ -40,7 +40,7 @@ model GvG {
 }
 
 model TechTH {
-  id            String   @id @default(cuid())
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
   TeamName      String
   Leader        String
   Number        String
@@ -54,7 +54,7 @@ model TechTH {
 }
 
 model TechStar_Unplugged {
-  id            String   @id @default(cuid())
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
   Type          String
   Leader        String
   Number        String
@@ -68,7 +68,7 @@ model TechStar_Unplugged {
 }
 
 model Aicons {
-  id            String   @id @default(cuid())
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
   Type          String
   Number        String
   Participant1  String
@@ -80,7 +80,7 @@ model Aicons {
 }
 
 model AiCF {
-  id            String   @id @default(cuid())
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
   Type          String
   Number        String
   Participant1  String
@@ -92,7 +92,7 @@ model AiCF {
 }
 
 model Contact {
-  id          Int    @id @default(autoincrement())
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
   name        String
   email       String
   phone       String
@@ -101,7 +101,7 @@ model Contact {
 }
 
 model dataSprint {
-  id            Int      @id @default(autoincrement())
+  id            String      @id @default(auto()) @map("_id") @db.ObjectId
   name          String
   Number        String
   College       String
