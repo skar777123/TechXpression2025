@@ -171,7 +171,7 @@ const Hero = () => {
       <CenterImage />
       <ParallaxImages />
 
-      <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-zinc-950" />
+      <div className="absolute  bottom-0 left-0 right-0 h-96 bg-gradient-to-b from-zinc-950/0 to-zinc-950" />
     </div>
   );
 };
@@ -242,34 +242,34 @@ const CenterImage = () => {
 
 const ParallaxImages = () => {
   return (
-    <div className="mx-auto max-w-5xl px-4 pt-[200px]  ">
+    <div className="mx-auto max-w-7xl px-4 pt-[200px] ">
       <ParallaxImg
-        src="/AI.jpg"
+        src="/PP.png"
         alt="AI"
-        start={-200}
-        end={200}
-        className="md:w-1/3 w-7/12"
+        start={-150}
+        end={-50}
+        className="md:w-3/12 w-12/12 rounded-full md:rounded-xl mx-auto md:mr-[100%]"
       />
       <ParallaxImg
-        src="/AIN.jpg"
+        src="/AIN.png"
         alt="AIN"
-        start={300}
-        end={-100}
-        className="mx-auto md:w-2/3 w-4/4"
+        start={-100}
+        end={-50}
+        className="mx-auto md:w-5/12 w-4/4  rounded-3xl "
       />
       <ParallaxImg
-        src="/AIC.png"
+        src="/CAZ.png"
         alt="Date"
-        start={300}
-        end={200}
-        className="ml-auto md:w-1/3 w-2/4"
+        start={-150}
+        end={-150}
+        className="ml-auto md:w-1/3 w-2/4 rounded-3xl"
       />
       <ParallaxImg
-        src="/TXB.jpg"
+        src="/HT.png"
         alt="TXB"
-        start={-300}
-        end={200}
-        className="md:mr-auto w-2/4 md:w-1/3"
+        start={-250}
+        end={-250}
+        className="md:mr-[100%] w-7/12 md:w-1/3 rounded-3xl"
       />
     </div>
   );
