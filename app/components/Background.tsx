@@ -246,9 +246,9 @@ const ParallaxImages = () => {
       <ParallaxImg
         src="/PP.png"
         alt="AI"
-        start={-1000}
-        end={-600}
-        className="w-12/12 rounded-full md:rounded-xl mx-auto md:mr-[100%]"
+        start={-500}
+        end={-200}
+        className="md:w-12/12 w-1/3 rounded-full  mx-auto md:mr-[100%]"
       />
       <ParallaxImg
         src="/AIN.png"
