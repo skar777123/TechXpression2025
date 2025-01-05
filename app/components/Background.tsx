@@ -248,14 +248,14 @@ const ParallaxImages = () => {
         alt="AI"
         start={-200}
         end={-100}
-        className="md:w-12/12 w-1/3 md:rounded-full rounded-3xl   mx-auto md:mr-[100%]"
+        className=" w-1/3 md:w-12/12  rounded-3xl md:rounded-full    mx-auto md:mr-[100%]"
       />
       <ParallaxImg
         src="/AIN.png"
         alt="AIN"
         start={-100}
         end={100}
-        className="mx-auto w-4/4 md:w-12/12  rounded-3xl "
+        className="mx-auto w-2/4 md:w-12/12  rounded-3xl "
       />
       <ParallaxImg
         src="/CAZ.png"
