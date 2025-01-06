@@ -69,8 +69,9 @@ const GeneralRules = () => {
             .
           </p>
           <p className="mb-1">
-            <b>6. </b> First <span className="text-yellow-500">40 Teams </span>{" "}
-            only will get Opportunity in the Data Sprint.
+            <b>6. </b> First{" "}
+            <span className="text-yellow-500">40 Participants </span> only will
+            get Opportunity in the Data Sprint.
           </p>
         </div>
       </div>
@@ -85,7 +86,7 @@ const GeneralRules = () => {
             submissions must be completed by the end time.
           </p>
           <p className="mb-1">
-            <b>2. </b>Projects must be original and created during the AIcons{" "}
+            <b>2. </b>Projects must be original and created during the event{" "}
             <span className="text-yellow-500">
               Using pre-existing code is not allowed
             </span>
@@ -115,6 +116,17 @@ const GeneralRules = () => {
             <span className="pl-8">
               OpenRefine, FeatureTools, PyOD and Fraud Detection APIs.
             </span>
+          </p>
+          <p className="mb-1">
+            <b>5. </b>Participants will focus on Fraud detection and Predictive
+            Modeling capable of Forecasting Trends{" "}
+            <span className="text-yellow-500">for next 50 years</span>.<br />
+          </p>
+          <p className="mb-1">
+            <b>6. </b>Participants are expected to submit a{" "}
+            <span className="text-yellow-500"> report</span> including problems
+            idetification and solution{" "}
+            <span className="text-yellow-500">based on prediction</span>.
           </p>
         </div>
       </div>
