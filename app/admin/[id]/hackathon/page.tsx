@@ -1,20 +1,24 @@
 "use client";
-import prisma from "@/app/db/db";
 import React, { useEffect, useState } from "react";
 
-export default function Hackathon() {
+export default function HackathonPage() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const hackathon = await fetch("/api/hackathon").then((res) => res.json());
-      setData(hackathon);
+      try {
+        const res = await fetch("api/hackathon");
+        const result = await res.json();
+        setData(result);
+      } catch (error) {
+        console.error(error);
+      }
     }
     fetchData();
   }, []);
 
   return (
-    <div className="hackathon">
+    <div>
       <h1>Hackathon</h1>
       {data.map((item) => (
         <div key={item.id}>
