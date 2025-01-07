@@ -57,19 +57,23 @@ const GeneralRules = () => {
             accepted.
           </p>
           <p className="mb-1">
-            <b>4. </b> The Event is based on getting Insights of an{" "}
+            <b>4. </b> All the Participants will be presented with
+            <span className="text-yellow-500">E-Certificate</span>  .
+          </p>
+          <p className="mb-1">
+            <b>5. </b> The Event is based on getting Insights of an{" "}
             <span className="text-yellow-500">Dataset</span>, which will be
             provided on the day of the event.
           </p>
           <p className="mb-1">
-            <b>5. </b> All participants must ensure{" "}
+            <b>6. </b> All participants must ensure{" "}
             <span className="text-yellow-500">
               respectful and fair behaviour
             </span>
             .
           </p>
           <p className="mb-1">
-            <b>6. </b> First{" "}
+            <b>7. </b> First{" "}
             <span className="text-yellow-500">40 Participants </span> only will
             get Opportunity in the Data Sprint.
           </p>

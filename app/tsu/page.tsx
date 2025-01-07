@@ -58,14 +58,18 @@ const GeneralRules = () => {
             <span className="text-yellow-500">49</span> /- per Team.
           </p>
           <p className="mb-1">
-            <b>3. </b>All participants must adhere to the B. K. Birla College
+            <b>3. </b> All the Participants will be presented with
+            <span className="text-yellow-500">E-Certificate</span>  .
+          </p>
+          <p className="mb-1">
+            <b>4. </b>All participants must adhere to the B. K. Birla College
             Code of Conduct and the events specific{" "}
             <span className="text-yellow-500">
               guidelines, ensuring respectful and fair behavior.
             </span>
           </p>
           <p className="mb-1">
-            <b>4. </b>Event will commence in Central Lawn at{" "}
+            <b>5. </b>Event will commence in Central Lawn at{" "}
             <span className="text-yellow-500">
               10:00 am <span className="text-white">on</span> 31st Feb 2025
             </span>

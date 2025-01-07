@@ -56,9 +56,9 @@ const GeneralRules = () => {
             <b>2. </b> Entry fee of Rs.
             <span className="text-yellow-500">49</span> /- per Team.
           </p>
-          <p className="pb-1">
-            3. Entry fee of Rs. <span className="text-yellow-500">49</span> /-
-            per team.
+          <p className="mb-1">
+            <b>3. </b> All the Participants will be presented with
+            <span className="text-yellow-500">E-Certificate</span>  .
           </p>
           <p className="pb-1">
             4. All teams must register by{" "}

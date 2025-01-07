@@ -62,26 +62,30 @@ const GeneralRules = () => {
             <span className="text-yellow-500">149</span> /- per Team.
           </p>
           <p className="mb-1">
-            <b>4. </b> All teams must register by{" "}
+            <b>4. </b> All the Participants will be presented with
+            <span className="text-yellow-500">E-Certificate</span>  .
+          </p>
+          <p className="mb-1">
+            <b>5. </b> All teams must register by{" "}
             <span className="text-yellow-500">25th of January</span>. Late
             registrations will not be accepted. Late registrations will not be
             accepted.
           </p>
           <p className="mb-1">
-            <b>5. </b> The Event is based solving hiiden clues in an Cyber crime
+            <b>6. </b> The Event is based solving hiiden clues in an Cyber crime
             scene with use of{" "}
             <span className="text-yellow-500">AI and Forensics </span> based on
             a problem statement.
           </p>
           <p className="mb-1">
-            <b>6. </b> All participants must ensure{" "}
+            <b>7. </b> All participants must ensure{" "}
             <span className="text-yellow-500">
               respectful and fair behaviour
             </span>
             .
           </p>
           <p className="mb-1">
-            <b>7. </b> First <span className="text-yellow-500">40 Teams </span>{" "}
+            <b>8. </b> First <span className="text-yellow-500">40 Teams </span>{" "}
             only will get Opportuinity in the AI Cyber Forensics.
           </p>
         </div>

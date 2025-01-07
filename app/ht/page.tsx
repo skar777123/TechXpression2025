@@ -233,26 +233,30 @@ const GeneralRules = () => {
             <span className="text-yellow-500">149</span> /- per Team.
           </p>
           <p className="mb-1">
-            <b>3. </b> The Solutions to Problem Statement should be based on the
+            <b>3. </b> All the Participants will be presented with
+            <span className="text-yellow-500">E-Certificate</span>  .
+          </p>
+          <p className="mb-1">
+            <b>4. </b> The Solutions to Problem Statement should be based on the
             Theme -<br />
             <span className="text-yellow-500">
               Artificial Intelligence and Cybersecurity
             </span>
           </p>
           <p className="mb-1">
-            <b>4. </b> All teams must register by{" "}
+            <b>5. </b> All teams must register by{" "}
             <span className="text-yellow-500">20th of January</span>. Late
             registrations will not be accepted.
           </p>
           <p className="mb-1">
-            <b>5. </b> All participants must ensure{" "}
+            <b>6. </b> All participants must ensure{" "}
             <span className="text-yellow-500">
               respectful and fair behaviour
             </span>
             .
           </p>
           <p className="mb-1">
-            <b>6. </b> First <span className="text-yellow-500">50 Teams </span>{" "}
+            <b>7. </b> First <span className="text-yellow-500">50 Teams </span>{" "}
             only will get Opportuinity in the Hackathon.
           </p>
         </div>
