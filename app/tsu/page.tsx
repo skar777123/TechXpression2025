@@ -71,7 +71,7 @@ const GeneralRules = () => {
           <p className="mb-1">
             <b>5. </b>Event will commence in Central Lawn at{" "}
             <span className="text-yellow-500">
-              10:00 am <span className="text-white">on</span> 31st Feb 2025
+              10:00 am <span className="text-white">on</span> 31st Jan 2025
             </span>
           </p>
         </div>
