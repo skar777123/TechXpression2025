@@ -79,8 +79,7 @@ export const tsuAction = async (
   secondMember: string,
   thirdMember: string,
   fourthMember: string,
-  collegeName: string,
-  transactionId: string
+  collegeName: string
 ) => {
   await prisma.techStar_Unplugged.create({
     data: {
@@ -158,7 +157,6 @@ export const dsprint = async (
   firstMember: string,
   mobileNumber: string,
   collegeName: string,
-  transactionId: string
 ) => {
   await prisma.dataSprint.create({
     data: {

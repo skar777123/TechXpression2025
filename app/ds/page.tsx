@@ -165,7 +165,7 @@ const Forms = () => {
   const [firstMember, setLeaderName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
   const [collegeName, setCollegeName] = useState("");
-  const [transactionId, setTransactionId] = useState("");
+  // const [transactionId, setTransactionId] = useState("");
   const [submit, setSubmit] = useState(false);
   const [spinner, setSpinner] = useState(false);
   return (
@@ -186,7 +186,7 @@ const Forms = () => {
           onSubmit={(e) => {
             e.preventDefault();
             setSpinner(true);
-            dsprint(mobileNumber, collegeName, firstMember, transactionId)
+            dsprint(mobileNumber, collegeName, firstMember)
               .then(() => {
                 toast(
                   "Registered Successfully - our team will contact you soon"
@@ -252,17 +252,17 @@ const Forms = () => {
                         onChange={(e) => setCollegeName(e.target.value)}
                       />
                     </div>
-                    <input
+                    {/* <input
                       type="text"
                       placeholder="Transaction ID"
                       className="mx-4 m-4 w-56 md:w-96 p-1 rounded-lg text-black"
                       required
                       value={transactionId}
                       onChange={(e) => setTransactionId(e.target.value)}
-                    />
-                    <div className="flex justify-center p-4">
+                    /> */}
+                    {/* <div className="flex justify-center p-4">
                       <Scanner />
-                    </div>
+                    </div> */}
                     <div className="flex  justify-center mt-4">
                       <input type="checkbox" className="mx-4 w-3" required />I
                       have read and agree to the all rules, terms and conditions

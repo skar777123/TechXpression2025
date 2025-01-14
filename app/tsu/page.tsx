@@ -161,7 +161,7 @@ const Forms = () => {
   const [thirdMember, setThirdMember] = useState("");
   const [fourthMember, setFourthMember] = useState("");
   const [collegeName, setCollegeName] = useState("");
-  const [transactionId, setTransactionId] = useState("");
+  // const [transactionId, setTransactionId] = useState("");
   const [submit, setSubmit] = useState(false);
   const [spinner, setSpinner] = useState(false);
   return (
@@ -189,8 +189,8 @@ const Forms = () => {
               secondMember,
               thirdMember,
               fourthMember,
-              collegeName,
-              transactionId
+              collegeName
+              // transactionId
             )
               .then(() => {
                 toast(
@@ -319,7 +319,7 @@ const Forms = () => {
                         onChange={(e) => setCollegeName(e.target.value)}
                       />
                     </div>
-                    <div>
+                    {/* <div>
                       <input
                         type="text"
                         placeholder="Transaction ID"
@@ -328,10 +328,10 @@ const Forms = () => {
                         value={transactionId}
                         onChange={(e) => setTransactionId(e.target.value)}
                       />
-                    </div>
-                    <div className="flex justify-center p-4">
+                    </div> */}
+                    {/* <div className="flex justify-center p-4">
                       <Scanner />
-                    </div>
+                    </div> */}
                     <div className="flex  justify-center mt-4">
                       <input type="checkbox" className="mx-4 w-3" required />I
                       have read and agree to the all rules, terms and conditions
