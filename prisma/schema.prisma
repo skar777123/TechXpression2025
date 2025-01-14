@@ -62,7 +62,7 @@ model TechStar_Unplugged {
   Participant3  String   @default("-")
   Participant4  String   @default("-")
   College       String
-  TransactionId String
+  TransactionId String   
   Created       DateTime @default(now())
   Updated       DateTime @updatedAt
 }

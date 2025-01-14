@@ -91,7 +91,7 @@ export const tsuAction = async (
       Participant3: thirdMember,
       Participant4: fourthMember,
       College: collegeName,
-      TransactionId: transactionId,
+      TransactionId: "-",
     },
   });
 };
@@ -165,7 +165,7 @@ export const dsprint = async (
       name: firstMember,
       Number: mobileNumber,
       College: collegeName,
-      TransactionId: transactionId,
+      TransactionId: "-",
     },
   });
 };

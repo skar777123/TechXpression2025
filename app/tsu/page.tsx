@@ -54,12 +54,11 @@ const GeneralRules = () => {
             must appoint a leader who will be the main point of contact.
           </p>
           <p className="mb-1">
-            <b>2. </b> Entry fee of Rs.
-            <span className="text-yellow-500">49</span> /- per Team.
+            <b>2. </b> No <span className="text-yellow-500">Entry Fees</span>.
           </p>
           <p className="mb-1">
-            <b>3. </b> All the Participants will be presented with
-            <span className="text-yellow-500">E-Certificate</span>  .
+            <b>3. </b> All the Participants will be presented with{" "}
+            <span className="text-yellow-500">E-Certificate</span> .
           </p>
           <p className="mb-1">
             <b>4. </b>All participants must adhere to the B. K. Birla College
