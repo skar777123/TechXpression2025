@@ -65,8 +65,7 @@ const GeneralRules = () => {
           <p className="mb-1">
             <b>4. </b> All teams must register by{" "}
             <span className="text-yellow-500">25th of January</span>. Late
-            registrations will not be accepted. Late registrations will not be
-            accepted.
+            registrations will not be accepted. 
           </p>
           <p className="mb-1">
             <b>5. </b> The Event is based on Developing an{" "}
