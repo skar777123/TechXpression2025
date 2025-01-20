@@ -60,7 +60,7 @@ const GeneralRules = () => {
             <span className="text-yellow-500">E-Certificate</span>  .
           </p>
           <p className="mb-1">
-            <b>4. </b>All teams must register by 20th Jan 2025. Late
+            <b>4. </b>All teams must register by 25th Jan 2025. Late
             registrations will not be accepted.
           </p>
           <p className="mb-1">
@@ -71,7 +71,7 @@ const GeneralRules = () => {
           </p>
           <p className="mb-1">
             <b>6. </b> Only First{" "}
-            <span className="text-yellow-500">15 Teams </span> only will get
+            <span className="text-yellow-500">20 Teams </span> only will get
             Opportuinity in the Hackathon.
           </p>
         </div>

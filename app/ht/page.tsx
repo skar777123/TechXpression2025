@@ -225,7 +225,7 @@ const GeneralRules = () => {
         <div className="ml-6">
           <p className="mb-1">
             <b>1. </b>Teams can consist of{" "}
-            <span className="text-yellow-500">4 members</span> mandatory. Each
+            <span className="text-yellow-500">1 to 4 members</span> mandatory. Each
             team must appoint a leader who will be the main point of contact.
           </p>
           <p className="mb-1">
@@ -394,16 +394,16 @@ const Forms = () => {
       {submit ? (
         <div className="flex flex-col items-center justify-center pb-40">
           <p className="font-bold text-yellow-500 text-3xl text-center">
-            {/* Thank You For Registering */}
-            <span className="text-yellow-500">
+            Thank You For Registering
+            {/* <span className="text-yellow-500">
               Registration will be starting on
-            </span>
+            </span> */}
           </p>
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
-            {/* More Opportunities for you...Click below */}
-            6th January, 2025 on 11:59 AM
+            More Opportunities for you...Click below
+            {/* 6th January, 2025 on 11:59 AM */}
           </p>
-          {/* <CycleText /> */}
+          <CycleText />
         </div>
       ) : (
         <form
@@ -445,7 +445,7 @@ const Forms = () => {
                 <div className="mb-10 text-center">
                   <span>
                     Last Date for Registration:{" "}
-                    <span className="text-yellow-500">20th Jan,2025</span>
+                    <span className="text-yellow-500">25th Jan,2025</span>
                     <br />
                     <span className="text-yellow-500">
                       On spot Registration not acceptable
