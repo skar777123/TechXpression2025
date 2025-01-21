@@ -62,7 +62,7 @@ model TechStar_Unplugged {
   Participant3  String   @default("-")
   Participant4  String   @default("-")
   College       String
-  TransactionId String   
+  TransactionId String
   Created       DateTime @default(now())
   Updated       DateTime @updatedAt
 }
@@ -92,7 +92,7 @@ model AiCF {
 }
 
 model Contact {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
   name        String
   email       String
   phone       String
@@ -101,8 +101,21 @@ model Contact {
 }
 
 model dataSprint {
-  id            String      @id @default(auto()) @map("_id") @db.ObjectId
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
   name          String
+  Number        String
+  College       String
+  TransactionId String
+  Created       DateTime @default(now())
+  Updated       DateTime @updatedAt
+}
+
+model esports {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  name2         String
+  name3         String
+  name4         String
   Number        String
   College       String
   TransactionId String

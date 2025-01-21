@@ -156,7 +156,7 @@ export const contact = async (
 export const dsprint = async (
   firstMember: string,
   mobileNumber: string,
-  collegeName: string,
+  collegeName: string
 ) => {
   await prisma.dataSprint.create({
     data: {
@@ -164,6 +164,28 @@ export const dsprint = async (
       Number: mobileNumber,
       College: collegeName,
       TransactionId: "-",
+    },
+  });
+};
+
+export const esports = async (
+  name1,
+  name2,
+  name3,
+  name4,
+  mobileNumber,
+  collegeName,
+  transactionId
+) => {
+  await prisma.esports.create({
+    data: {
+      name: name1,
+      name2: name2,
+      name3: name3,
+      name4: name4,
+      Number: mobileNumber,
+      College: collegeName,
+      TransactionId: transactionId,
     },
   });
 };

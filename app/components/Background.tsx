@@ -356,6 +356,12 @@ const Schedule = () => {
         date="1st Feb"
         location="M.Fin Lab, IT-Building"
       />
+      <ScheduleItem
+        href="/es"
+        title="E-Sports"
+        date="31st Jan and 1st Feb"
+        location="310-NR Building"
+      />
     </section>
   );
 };
