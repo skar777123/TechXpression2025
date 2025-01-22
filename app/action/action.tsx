@@ -169,17 +169,19 @@ export const dsprint = async (
 };
 
 export const esports = async (
-  teamName,
-  name1,
-  name2,
-  name3,
-  name4,
-  mobileNumber,
-  collegeName,
-  transactionId
+  enroll: string,
+  teamName: string,
+  name1: string,
+  name2: string,
+  name3: string,
+  name4: string,
+  mobileNumber: string,
+  collegeName: string,
+  transactionId: string
 ) => {
   await prisma.esports.create({
     data: {
+      enroll: enroll,
       TeamName: teamName,
       name: name1,
       name2: name2,

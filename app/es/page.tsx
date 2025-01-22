@@ -145,6 +145,7 @@ const Forms = () => {
   const [name4, setFourthMember] = useState("");
   const [collegeName, setCollegeName] = useState("");
   const [transactionId, setTransactionId] = useState("");
+  const [enroll,setEnroll] = useState("")
   // const [transactionScreenshot, setTransactionScreenshot] = useState("");
   const [submit, setSubmit] = useState(false);
   const [spinner, setSpinner] = useState(false);
@@ -183,6 +184,7 @@ const Forms = () => {
             e.preventDefault();
             setSpinner(true);
             esports(
+              enroll,
               teamName,
               name1,
               name2,
@@ -229,6 +231,33 @@ const Forms = () => {
                   <div className="flex flex-col">
                     <div className="flex flex-col md:flex-row  items-center m-2">
                       <div>
+                        <div className="flex flex-row ">
+                          <label>Enroll in: </label>
+                          <div className="flex flex-row items-center">
+                            <input
+                              type="radio"
+                              name="type"
+                              // placeholder="Team Name"
+                              className="mx-4 w-30 m-4"
+                              required
+                              value="BGMI"
+                              onChange={(e) => setEnroll(e.target.value)}
+                            />
+                            <p>BGMI</p>
+                          </div>
+                          <div className="flex flex-row items-center">
+                            <input
+                              type="radio"
+                              name="type"
+                              // placeholder="Team Name"
+                              className="mx-4 w-30 m-4"
+                              required
+                              value="FreeFire"
+                              onChange={(e) => setEnroll(e.target.value)}
+                            />
+                            <p>FreeFire</p>
+                          </div>
+                        </div>
                         <input
                           type="text"
                           placeholder="Team Name"

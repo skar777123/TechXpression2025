@@ -118,6 +118,7 @@ model esports {
   name3         String
   name4         String
   Number        String
+  enroll        String
   College       String
   TransactionId String
   Created       DateTime @default(now())

@@ -238,7 +238,6 @@ const Forms = () => {
                   <p className="text-3xl font-bold">Registration Form:</p>
                 </div>
                 <br />
-
                 <div className="flex flex-wrap  md:flex-nowrap gap-4 ">
                   <div className="flex flex-col items-center">
                     <div>
