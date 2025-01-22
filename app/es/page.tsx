@@ -4,7 +4,7 @@ import { BarLoader, BoldCopy, CycleText, Nav, TypingText } from "../ht/page";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Scanner from "../ht/ui/scanner";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { esports } from "../action/action";
 
 export default function page() {
@@ -20,6 +20,7 @@ export default function page() {
         backgroundTextClassName="text-yellow-500"
         textClassName="text-yellow-100"
       />
+      <ToastContainer position="top-right" hideProgressBar />
       <div className="flex flex-row justify-center">
         <BoldCopy
           text="BGMI"
@@ -145,7 +146,7 @@ const Forms = () => {
   const [name4, setFourthMember] = useState("");
   const [collegeName, setCollegeName] = useState("");
   const [transactionId, setTransactionId] = useState("");
-  const [enroll,setEnroll] = useState("")
+  const [enroll, setEnroll] = useState("");
   // const [transactionScreenshot, setTransactionScreenshot] = useState("");
   const [submit, setSubmit] = useState(false);
   const [spinner, setSpinner] = useState(false);
