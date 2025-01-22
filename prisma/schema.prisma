@@ -112,6 +112,7 @@ model dataSprint {
 
 model esports {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  TeamName      String
   name          String
   name2         String
   name3         String

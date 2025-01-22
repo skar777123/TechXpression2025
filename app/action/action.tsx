@@ -169,6 +169,7 @@ export const dsprint = async (
 };
 
 export const esports = async (
+  teamName,
   name1,
   name2,
   name3,
@@ -179,6 +180,7 @@ export const esports = async (
 ) => {
   await prisma.esports.create({
     data: {
+      TeamName: teamName,
       name: name1,
       name2: name2,
       name3: name3,
