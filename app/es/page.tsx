@@ -146,7 +146,7 @@ const Forms = () => {
   const [collegeName, setCollegeName] = useState("");
   const [transactionId, setTransactionId] = useState("");
   // const [transactionScreenshot, setTransactionScreenshot] = useState("");
-  const [submit, setSubmit] = useState(true);
+  const [submit, setSubmit] = useState(false);
   const [spinner, setSpinner] = useState(false);
   return (
     <section id="register">
