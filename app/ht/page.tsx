@@ -225,8 +225,9 @@ const GeneralRules = () => {
         <div className="ml-6">
           <p className="mb-1">
             <b>1. </b>Teams can consist of{" "}
-            <span className="text-yellow-500">1 to 4 members</span> mandatory. Each
-            team must appoint a leader who will be the main point of contact.
+            <span className="text-yellow-500">1 to 4 members</span> mandatory.
+            Each team must appoint a leader who will be the main point of
+            contact.
           </p>
           <p className="mb-1">
             <b>2. </b> Entry fee of Rs.
@@ -234,7 +235,7 @@ const GeneralRules = () => {
           </p>
           <p className="mb-1">
             <b>3. </b> All the Participants will be presented with
-            <span className="text-yellow-500">E-Certificate</span>  .
+            <span className="text-yellow-500">E-Certificate</span> .
           </p>
           <p className="mb-1">
             <b>4. </b> The Solutions to Problem Statement should be based on the
@@ -387,20 +388,18 @@ const Forms = () => {
   const [collegeName, setCollegeName] = useState("");
   const [transactionId, setTransactionId] = useState("");
   // const [transactionScreenshot, setTransactionScreenshot] = useState("");
-  const [submit, setSubmit] = useState(true);
+  const [submit, setSubmit] = useState(false);
   const [spinner, setSpinner] = useState(false);
   return (
     <section id="register">
       {submit ? (
         <div className="flex flex-col items-center justify-center pb-40">
           <p className="font-bold text-yellow-500 text-3xl text-center">
-            {/* Thank You For Registering */}
-            <span className="text-yellow-500">
-              Registration is been closed
-            </span>
+            Thank You For Registering
+            {/* <span className="text-yellow-500">Registration is been closed</span> */}
           </p>
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
-            {/* More Opportunities for you...Click below */}
+            More Opportunities for you...Click below
             {/* 6th January, 2025 on 11:59 AM */}
           </p>
           <CycleText />
@@ -448,7 +447,8 @@ const Forms = () => {
                     <span className="text-yellow-500">25th Jan,2025</span>
                     <br />
                     <span className="text-yellow-500">
-                      On spot Registration not acceptable
+                      New Registration have to also Enroll in AIcons at just
+                      30Rs (All four team members have to participate)
                     </span>
                   </span>
                   <p className="text-3xl font-bold">Registration Form:</p>
@@ -526,6 +526,10 @@ const Forms = () => {
                         value={transactionId}
                         onChange={(e) => setTransactionId(e.target.value)}
                       />
+                      <div className="flex  justify-center mt-4">
+                        <input type="checkbox" className="mx-4 w-3" required />{" "}
+                        Are you enrolled in AIcons and Cyber Forensics.
+                      </div>
                     </div>
                     <div className="flex justify-center p-4">
                       <Scanner />
@@ -659,6 +663,7 @@ const variants = {
     },
   },
 };
+
 export const BarLoader = () => {
   return (
     <motion.div
