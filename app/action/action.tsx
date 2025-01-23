@@ -193,3 +193,40 @@ export const esports = async (
     },
   });
 };
+
+export const fetchHt = async () => {
+  const count = await prisma.hackathon.findMany();
+  return count;
+};
+
+export const fetchGvg = async () => {
+  const count = await prisma.gvG.findMany();
+  return count;
+};
+
+export const fetchAic = async () => {
+  const count = await prisma.aicons.findMany();
+  return count;
+};
+export const fetchAicf = async () => {
+  const count = await prisma.aiCF.findMany();
+  return count;
+};
+export const fetchDs = async () => {
+  const count = await prisma.dataSprint.findMany();
+  return count;
+};
+export const fetchTth = async () => {
+  const count = await prisma.techTH.findMany();
+  return count;
+};
+
+export const fetchTsu = async () => {
+  const count = await prisma.techStar_Unplugged.findMany();
+  return count;
+};
+
+export const fetchEs = async () => {
+  const count = await prisma.esports.findMany();
+  return count;
+};
