@@ -80,6 +80,9 @@ const GeneralRules = () => {
             <b>7. </b> First come{" "}
             <span className="text-yellow-500">First serve</span> .
           </p>
+          <p className="mb-1">
+            <b>8. </b> No <span className="text-yellow-500">Refunds</span> .
+          </p>
         </div>
       </div>
       <div className="text-start mt-4">
