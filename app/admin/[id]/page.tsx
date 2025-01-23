@@ -85,6 +85,17 @@ export default function page({ params }) {
                 <h3>
                   Esports : <span className="text-yellow-500">{es.length}</span>
                 </h3>
+                <h1 className="font-bold text-center pb-4">
+                  Total Participation Teams:{" "}
+                  {hackathon.length +
+                    gvg.length +
+                    tth.length +
+                    tsu.length +
+                    ds.length +
+                    es.length +
+                    aic.length +
+                    aicf.length}
+                </h1>
               </div>
             </div>
           </div>
