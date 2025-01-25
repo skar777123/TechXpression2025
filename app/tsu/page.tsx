@@ -162,7 +162,7 @@ const Forms = () => {
   const [fourthMember, setFourthMember] = useState("");
   const [collegeName, setCollegeName] = useState("");
   // const [transactionId, setTransactionId] = useState("");
-  const [submit, setSubmit] = useState(true);
+  const [submit, setSubmit] = useState(false);
   const [spinner, setSpinner] = useState(false);
   return (
     <section id="register">
