@@ -169,11 +169,11 @@ const Forms = () => {
       {submit ? (
         <div className="flex flex-col items-center mt-32 ml-20">
           <p className="font-bold text-yellow-500 text-3xl text-center">
-            {/* Thank You For Registering */}
-            The Registration has been Temprorary closed 
+             Thank You For Registering 
+            {/* The Registration has been Temprorary closed */} 
           </p>
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
-            {/* More Opportunities for you...Click below */}
+             More Opportunities for you...Click below 
           </p>
           <CycleText />
         </div>
