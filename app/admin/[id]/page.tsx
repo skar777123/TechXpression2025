@@ -96,6 +96,9 @@ export default function page({ params }) {
                     aic.length +
                     aicf.length}
                 </h1>
+                {/* <div>
+                  {hackathon.Leader.length}
+                </div> */}
               </div>
             </div>
           </div>
