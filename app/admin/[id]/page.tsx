@@ -34,6 +34,7 @@ export default function page({ params }) {
   const [aicf, setAicf] = useState([]);
   const [ds, setDs] = useState([]);
   const [es, setEs] = useState([]);
+  const [list, setList] = useState([]);
   const unwrappedParams: any = use(params);
   const id = unwrappedParams.id;
   return (
@@ -44,12 +45,12 @@ export default function page({ params }) {
       id === "ChetnaM" ||
       id === "Akash" ||
       id === "Mayuri" ? (
-        <div>
+        <div className="h-screen">
           <div className="flex flex-col p-4">
             <div className="flex justify-center">
               <Image src="/TX.png" alt="logo" width={80} height={80} />
             </div>
-            <div className="h-screen pt-10 flex justify-center">
+            <div className=" pt-10 flex  justify-center">
               <div>
                 <h1 className="font-bold text-center pb-4">Participation</h1>
                 <h3>
@@ -96,11 +97,91 @@ export default function page({ params }) {
                     aic.length +
                     aicf.length}
                 </h1>
-                {/* <div>
-                  {hackathon.Leader.length}
-                </div> */}
               </div>
             </div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="flex justify-center">
+                <button
+                  onClick={() => {
+                    setList(hackathon);
+                  }}
+                  className="p-1 m-2  bg-yellow-500 rounded-lg"
+                >
+                  Hackathon
+                </button>
+                <button
+                  onClick={() => {
+                    setList(gvg);
+                  }}
+                  className="p-1 m-2  bg-yellow-500 rounded-lg"
+                >
+                  GvG
+                </button>
+                <button
+                  onClick={() => {
+                    setList(aic);
+                  }}
+                  className="p-1 m-2 bg-yellow-500 rounded-lg"
+                >
+                  Aicons
+                </button>
+                <button
+                  onClick={() => {
+                    setList(aicf);
+                  }}
+                  className="p-1 m-2 bg-yellow-500 rounded-lg"
+                >
+                  AI Cyber Forensics
+                </button>
+              </div>
+              <div className="flex justify-center">
+                <button
+                  onClick={() => {
+                    setList(tth);
+                  }}
+                  className="p-1 m-2 bg-yellow-500 rounded-lg"
+                >
+                  Tech Treasure hunt
+                </button>
+                <button
+                  onClick={() => {
+                    setList(tsu);
+                  }}
+                  className="p-1 m-2 bg-yellow-500 rounded-lg"
+                >
+                  TechStar Unplugged
+                </button>
+                <button
+                  onClick={() => {
+                    setList(es);
+                  }}
+                  className="p-1 m-2 bg-yellow-500 rounded-lg"
+                >
+                  Esports
+                </button>
+                <button
+                  onClick={() => {
+                    setList(ds);
+                  }}
+                  className="p-1 m-2 bg-yellow-500 rounded-lg"
+                >
+                  Data Sprint
+                </button>
+              </div>
+            </div>
+            {list &&
+              list.map((l, item) => {
+                return (
+                  <div
+                    key={item}
+                    className="h-[100%] flex justify-center m-2 p-2 bg-gray"
+                  >
+                    <div className="h-screen ">
+                      <h1 className="text-ml text-center p-2">{l.TeamName}</h1>
+                    </div>
+                  </div>
+                );
+              })}
           </div>
         </div>
       ) : (
