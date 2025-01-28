@@ -52,37 +52,37 @@ export const Background = () => {
             </div>
           </div> */}
           <Schedule />
-          {/* <Creds /> */}
+          <Creds />
         </ReactLenis>
       </div>
     </>
   );
 };
 
-// const Creds = () => {
-//   return (
-//     <div className="flex flex-col justify-center items-center text-white text-s pb-10 opacity-30">
-//       <p>Copyright - B. K. Birla College, Kalyan</p>
-//       <p>
-//         Developed by{" "}
-//         <a
-//           href="https://www.linkedin.com/in/sanskar-gaikwad"
-//           className="text-yellow-500"
-//         >
-//           Sanskar Gaikwad{" "}
-//         </a>{" "}
-//         {/* and{" "}
-//         <a
-//           href="https://www.linkedin.com/in/aditya-naikwadi-2753a72a1/"
-//           className="text-yellow-500"
-//         >
-//           {" "}
-//           Aditya Naikwadi
-//         </a> */}
-//       </p>
-//     </div>
-//   );
-// };
+const Creds = () => {
+  return (
+    <div className="flex flex-col justify-center items-center text-white text-s pb-10 opacity-30">
+      <p>Copyright - B. K. Birla College, Kalyan</p>
+      <p>
+        Developed by{" "}
+        <a
+          href="https://www.linkedin.com/in/sanskar-gaikwad"
+          className="text-yellow-500"
+        >
+          Sanskar Gaikwad{" "}
+        </a>{" "}
+        {/* and{" "}
+        <a
+          href="https://www.linkedin.com/in/aditya-naikwadi-2753a72a1/"
+          className="text-yellow-500"
+        >
+          {" "}
+          Aditya Naikwadi
+        </a> */}
+      </p>
+    </div>
+  );
+};
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -318,7 +318,7 @@ const Schedule = () => {
         href="/ht"
         title="Hackathon"
         date="31st Jan & 1st Feb"
-        location="Seminar Hall, IT-Building"
+        location="004 & 005, NR-Building"
       />
       <ScheduleItem
         href="/gvg"
@@ -335,13 +335,13 @@ const Schedule = () => {
       <ScheduleItem
         href="/tsu"
         title="TechStar Unplugged"
-        date="31st Jan"
+        date="1st Feb"
         location="Central Lawn"
       />
       <ScheduleItem
         href="/aic"
         title="AIcons"
-        date="1st Feb"
+        date="31st Jan"
         location="IOT Lab, NR-Building"
       />
       <ScheduleItem
