@@ -60,12 +60,12 @@ const GeneralRules = () => {
           </p>
           <p className="mb-1">
             <b>3. </b> All the Participants will be presented with
-            <span className="text-yellow-500">E-Certificate</span>  .
+            <span className="text-yellow-500">E-Certificate</span> .
           </p>
           <p className="mb-1">
             <b>4. </b> All teams must register by{" "}
             <span className="text-yellow-500">25th of January</span>. Late
-            registrations will not be accepted. 
+            registrations will not be accepted.
           </p>
           <p className="mb-1">
             <b>5. </b> The Event is based on Developing an{" "}
@@ -234,11 +234,15 @@ const Forms = () => {
               <>
                 <div className="mb-10 text-center">
                   <span>
+                    Less than 20-teams will be caution changes in{" "}
+                    <span className="text-yellow-500">Prizepool</span>
+                  </span>
+                  <span>
                     Last Date for Registration:{" "}
-                    <span className="text-yellow-500">25th Jan,2025</span>
+                    <span className="text-yellow-500">30th Jan,2025</span>
                     <br />
                     <span className="text-yellow-500">
-                      On spot Registration not acceptable
+                      On spot Registration accepted
                     </span>
                   </span>
                   <p className="text-3xl font-bold">Registration Form:</p>
