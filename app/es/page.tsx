@@ -151,14 +151,15 @@ const Forms = () => {
   const [transactionId, setTransactionId] = useState("");
   const [enroll, setEnroll] = useState("");
   // const [transactionScreenshot, setTransactionScreenshot] = useState("");
-  const [submit, setSubmit] = useState(true);
+  const [submit, setSubmit] = useState(false);
   const [spinner, setSpinner] = useState(false);
   return (
     <section id="register">
       {submit ? (
         <div className="flex flex-col items-center justify-center pb-40">
           <p className="font-bold text-yellow-500 text-3xl text-center">
-            Registration Closed , On the spot available
+            {/* Registration Closed , On the spot available */}
+            Thank You for Registering
             {/* <span className="text-yellow-500">Registration is been closed</span> */}
           </p>
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
@@ -249,7 +250,7 @@ const Forms = () => {
                             />
                             <p>BGMI</p>
                           </div>
-                          <div className="flex flex-row items-center">
+                          {/* <div className="flex flex-row items-center">
                             <input
                               type="radio"
                               name="type"
@@ -260,7 +261,7 @@ const Forms = () => {
                               onChange={(e) => setEnroll(e.target.value)}
                             />
                             <p>FreeFire</p>
-                          </div>
+                          </div> */}
                         </div>
                         <input
                           type="text"
