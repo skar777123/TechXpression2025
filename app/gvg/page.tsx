@@ -169,7 +169,7 @@ const Forms = () => {
   const [collegeName, setCollegeName] = useState("");
   const [transactionId, setTransactionId] = useState("");
   // const [transactionScreenshot, setTransactionScreenshot] = useState("");
-  const [spinner, setSpinner] = useState(false);
+  const [spinner, setSpinner] = useState(true);
   const [submit, setSubmit] = useState(false);
   return (
     <section id="register">
@@ -179,13 +179,14 @@ const Forms = () => {
             <p className="font-bold text-yellow-500 text-3xl text-center">
               {/* Thank You For Registering */}
               <span className="text-yellow-500">
-                Registration will be starting on
+                {/* Registration will be starting on */}
+                Registration is Closed
               </span>
             </p>
           </div>
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
             {/* More Opportunities for you...Click below */}
-            6th January, 2025 on 11:59 AM
+            {/* 6th January, 2025 on 11:59 AM */}
           </p>
           <CycleText />
         </div>

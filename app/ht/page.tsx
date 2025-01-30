@@ -388,15 +388,15 @@ const Forms = () => {
   const [collegeName, setCollegeName] = useState("");
   const [transactionId, setTransactionId] = useState("");
   // const [transactionScreenshot, setTransactionScreenshot] = useState("");
-  const [submit, setSubmit] = useState(false);
+  const [submit, setSubmit] = useState(true);
   const [spinner, setSpinner] = useState(false);
   return (
     <section id="register">
       {submit ? (
         <div className="flex flex-col items-center justify-center pb-40">
           <p className="font-bold text-yellow-500 text-3xl text-center">
-            Thank You For Registering
-            {/* <span className="text-yellow-500">Registration is been Temporary closed</span> */}
+            {/* Thank You For Registering */}
+            <span className="text-yellow-500">Registration is been closed</span>
           </p>
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
             More Opportunities for you...Click below

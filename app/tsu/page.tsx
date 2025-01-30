@@ -162,7 +162,7 @@ const Forms = () => {
   const [fourthMember, setFourthMember] = useState("");
   const [collegeName, setCollegeName] = useState("");
   // const [transactionId, setTransactionId] = useState("");
-  const [submit, setSubmit] = useState(false);
+  const [submit, setSubmit] = useState(true);
   const [spinner, setSpinner] = useState(false);
   return (
     <section id="register">
@@ -170,7 +170,7 @@ const Forms = () => {
         <div className="flex flex-col items-center mt-32 ml-20">
           <p className="font-bold text-yellow-500 text-3xl text-center">
             {/* Thank You For Registering */} 
-             The Registration has been Temprorary closed 
+             The Registration has been  closed 
           </p>
           <p className="font-bold text-yellow-500 text-3xl mb-16 text-center">
              More Opportunities for you...Click below 
