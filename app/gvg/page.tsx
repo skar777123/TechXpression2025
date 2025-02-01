@@ -169,9 +169,9 @@ const Forms = () => {
   const [collegeName, setCollegeName] = useState("");
   const [transactionId, setTransactionId] = useState("");
   // const [transactionScreenshot, setTransactionScreenshot] = useState("");
-  const [spinner, setSpinner] = useState(true);
-  const [submit, setSubmit] = useState(false);
-  return (
+  const [spinner, setSpinner] = useState(false);
+  const [submit, setSubmit] = useState(true);
+  return(
     <section id="register">
       {submit ? (
         <div className="flex flex-col items-center justify-center pb-40">
