@@ -60,10 +60,10 @@ const GeneralRules = () => {
             <span className="text-yellow-500">4 members</span> mandatory. Each
             team must appoint a leader who will be the main point of contact.
           </p>
-          <p className="mb-1">
+          {/*<p className="mb-1">
             <b>2. </b> Entry fee of Rs.
             <span className="text-yellow-500">100</span> /- per Team.
-          </p>
+          </p>*/} 
           <p className="mb-1">
             <b>3. </b> All teams must register by{" "}
             <span className="text-yellow-500">28th of January</span>. Late
